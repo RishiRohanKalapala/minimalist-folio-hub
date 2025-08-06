@@ -1,18 +1,37 @@
 import { motion } from "framer-motion";
 import { PortfolioSection } from "@/components/portfolio-section";
 import FloatingDockDemo from "@/components/floating-dock-demo";
+import Galaxy from "@/components/Galaxy";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Hero Section */}
+      {/* Hero Section with Galaxy Background */}
       <motion.section 
-        className="min-h-screen flex items-center justify-center px-6"
+        className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="text-center max-w-4xl mx-auto">
+        {/* Galaxy Background */}
+        <div className="absolute inset-0 z-0">
+          <Galaxy 
+            mouseInteraction={true}
+            mouseRepulsion={true}
+            density={1.2}
+            glowIntensity={0.6}
+            saturation={0.3}
+            hueShift={200}
+            speed={0.8}
+            twinkleIntensity={0.4}
+            rotationSpeed={0.05}
+            repulsionStrength={1.5}
+            transparent={true}
+          />
+        </div>
+        
+        {/* Hero Content */}
+        <div className="text-center max-w-4xl mx-auto relative z-10">
           <motion.h1 
             className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 text-text-primary"
             initial={{ opacity: 0, y: 50 }}
@@ -35,7 +54,7 @@ const Index = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Scroll to explore
+            Move your cursor to explore the stars
           </motion.div>
         </div>
       </motion.section>
