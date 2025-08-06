@@ -52,16 +52,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Portfolio specific colors
+				'text-primary': 'hsl(var(--text-primary))',
+				'text-secondary': 'hsl(var(--text-secondary))',
+				'text-muted': 'hsl(var(--text-muted))',
+				'section-bg': 'hsl(var(--section-bg))',
+				'hover-bg': 'hsl(var(--hover-bg))'
+			},
+			transitionTimingFunction: {
+				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
