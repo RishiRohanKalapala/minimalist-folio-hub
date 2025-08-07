@@ -249,6 +249,7 @@ const Index = () => {
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
                    A Fullstack Blog Platform designed with modern UI elements for a better user experience. 
+                  </p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
               </div>
