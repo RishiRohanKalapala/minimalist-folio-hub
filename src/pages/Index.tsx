@@ -1,11 +1,3 @@
-Of course, here is the updated code that makes the project and blog sections clickable links. I've wrapped the relevant sections in anchor (<a>) tags and added href attributes. You'll need to replace the placeholder href values with the actual URLs for your project and blog pages.
-
-code
-Jsx
-download
-content_copy
-expand_less
-
 import { motion } from "framer-motion";
 import FloatingDockDemo from "@/components/floating-dock-demo";
 import { ArrowUpRight, MapPin, Calendar } from "lucide-react";
