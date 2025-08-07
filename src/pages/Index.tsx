@@ -236,7 +236,7 @@ const Index = () => {
         >
           <h2 className="text-xl font-medium text-text-primary mb-8">Completed Projects</h2>
           <div className="space-y-12">
-            <a href="/projects/weather-prediction" className="group block">
+            <a href="https://knots-psi.vercel.app/" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
