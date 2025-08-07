@@ -244,7 +244,7 @@ const Index = () => {
                      Knots
                     </h3>
                     <span className="px-2 py-1 bg-purple-500/10 text-purple-500 text-xs rounded-full">
-                      completed
+                      Completed
                     </span>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
@@ -324,22 +324,21 @@ const Index = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-xl font-medium text-text-primary mb-8">thoughts & writings</h2>
+          <h2 className="text-xl font-medium text-text-primary mb-8">Thoughts & Writings</h2>
           <div className="space-y-8">
             <a href="/blog/evolution-of-web-animation" className="group block cursor-pointer">
               <article>
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth mb-1">
-                      the evolution of web animation
+                      Traditional Coding v/s Vibe Coding
                     </h3>
                     <p className="text-text-secondary text-sm leading-relaxed">
-                      exploring how micro-interactions and immersive 3d experiences are reshaping 
-                      user engagement in modern web applications.
+                      Exploring the fundamental differences between traditional coding approaches and the innovative "Vibe Coding" methodology
                     </p>
                   </div>
                   <div className="text-right">
-                    <time className="text-text-muted text-xs">dec 2024</time>
+                    <time className="text-text-muted text-xs">AUG 2025</time>
                     <ArrowUpRight className="w-4 h-4 text-text-muted group-hover:text-primary transition-smooth mt-1" />
                   </div>
                 </div>
@@ -351,15 +350,15 @@ const Index = () => {
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth mb-1">
-                      building accessible design systems
+                    Comprehensive Web & App Development Roadmap
                     </h3>
                     <p className="text-text-secondary text-sm leading-relaxed">
                       a comprehensive guide to creating design systems that prioritize accessibility 
-                      without compromising on visual appeal.
+                      without compromising on visual appeal using P3D Formula
                     </p>
                   </div>
                   <div className="text-right">
-                    <time className="text-text-muted text-xs">nov 2024</time>
+                    <time className="text-text-muted text-xs">JUN 2025</time>
                     <ArrowUpRight className="w-4 h-4 text-text-muted group-hover:text-primary transition-smooth mt-1" />
                   </div>
                 </div>
@@ -385,7 +384,7 @@ const Index = () => {
             <div className="space-y-2">
               <p className="text-sm text-text-secondary">selected clients include</p>
               <div className="flex flex-wrap gap-x-6 gap-y-2">
-                {['techcorp', 'startupx', 'creative collective', 'healthtech innovations', 'fintech labs', 'design studio'].map((client) => (
+                {['techcorp', 'Siya Jewellery', 'Grow & Learn Academy'].map((client) => (
                   <span key={client} className="text-text-primary text-sm font-medium">
                     {client}
                   </span>
