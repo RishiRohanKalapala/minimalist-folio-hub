@@ -25,13 +25,13 @@ const Index = () => {
               </div>
               <div className="flex flex-col justify-center">
                 <h1 className="text-4xl md:text-5xl font-light text-text-primary mb-2 tracking-tight">
-                  rishi rohan kalapala
+                  Rishi Rohan Kalapala
                 </h1>
-                <p className="text-text-secondary font-medium mb-3">btech aiml final year student</p>
+                <p className="text-text-secondary font-medium mb-3">Btech AIML Final year student</p>
                 <div className="flex items-center gap-4 text-sm text-text-muted">
                   <div className="flex items-center gap-1">
                     <MapPin className="w-3 h-3" />
-                    <span>hyderabad</span>
+                    <span>Hyderabad</span>
                   </div>
                   <div className="flex items-center gap-1">
                     <Calendar className="w-3 h-3" />
@@ -41,8 +41,8 @@ const Index = () => {
               </div>
             </div>
             <div className="text-right">
-              <p className="text-text-secondary text-sm">studying at</p>
-              <p className="text-text-primary font-medium">cmr institute of technology</p>
+              <p className="text-text-secondary text-sm">Studying at</p>
+              <p className="text-text-primary font-medium">CMRIT, HYD</p>
             </div>
           </div>
         </motion.header>
@@ -57,10 +57,10 @@ const Index = () => {
         >
           <div className="grid md:grid-cols-3 gap-12">
             <div className="md:col-span-2">
-              <h2 className="text-xl font-medium text-text-primary mb-6">introduction</h2>
+              <h2 className="text-xl font-medium text-text-primary mb-6">Introduction</h2>
               <div className="space-y-5 text-text-secondary leading-relaxed text-base">
                 <p>
-                  passionate computer science student specializing in artificial intelligence and machine learning 
+                  Passionate computer science student specializing in artificial intelligence and machine learning 
                   at cmr institute of technology, exploring the intersection of technology and creativity.
                 </p>
                 <p>
@@ -70,18 +70,18 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-lg font-medium text-text-primary mb-4">currently</h3>
+              <h3 className="text-lg font-medium text-text-primary mb-4">Currently</h3>
               <div className="space-y-3 text-sm">
                 <div>
-                  <p className="text-text-secondary">learning</p>
-                  <p className="text-text-primary">machine learning</p>
+                  <p className="text-text-secondary">Learning</p>
+                  <p className="text-text-primary">Machine Learning</p>
                 </div>
                 <div>
-                  <p className="text-text-secondary">building</p>
-                  <p className="text-text-primary">ai projects</p>
+                  <p className="text-text-secondary">Building</p>
+                  <p className="text-text-primary">Ai projects</p>
                 </div>
                 <div>
-                  <p className="text-text-secondary">exploring</p>
+                  <p className="text-text-secondary">Exploring</p>
                   <p className="text-text-primary">deep learning</p>
                 </div>
               </div>
@@ -99,10 +99,10 @@ const Index = () => {
         >
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-xl font-medium text-text-primary mb-6">skills & technologies</h2>
+              <h2 className="text-xl font-medium text-text-primary mb-6">Skills & Technologies</h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-text-primary font-medium mb-3">artificial intelligence</h3>
+                  <h3 className="text-text-primary font-medium mb-3">Artificial Intelligence</h3>
                   <div className="flex flex-wrap gap-2">
                     {['python', 'tensorflow', 'pytorch', 'scikit-learn', 'opencv', 'numpy'].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-muted text-text-secondary text-xs rounded-full">
@@ -112,9 +112,9 @@ const Index = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-text-primary font-medium mb-3">web development</h3>
+                  <h3 className="text-text-primary font-medium mb-3">Web Development</h3>
                   <div className="flex flex-wrap gap-2">
-                    {['react', 'javascript', 'html/css', 'node.js', 'mongodb', 'git'].map((skill) => (
+                    {['react', 'javascript', 'html/css', 'node.js', 'mongodb', 'git', 'github'].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-muted text-text-secondary text-xs rounded-full">
                         {skill}
                       </span>
@@ -122,7 +122,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-text-primary font-medium mb-3">data science</h3>
+                  <h3 className="text-text-primary font-medium mb-3">Data Science</h3>
                   <div className="flex flex-wrap gap-2">
                     {['pandas', 'matplotlib', 'jupyter', 'sql', 'tableau', 'excel'].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-muted text-text-secondary text-xs rounded-full">
@@ -134,28 +134,28 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <h2 className="text-xl font-medium text-text-primary mb-6">academic focus</h2>
+              <h2 className="text-xl font-medium text-text-primary mb-6">Academic Focus</h2>
               <div className="space-y-6">
                 <div className="border-l border-border pl-4">
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-text-primary font-medium">machine learning</h3>
+                    <h3 className="text-text-primary font-medium">Machine Learning</h3>
                     <span className="text-text-muted text-sm">current</span>
                   </div>
-                  <p className="text-text-secondary text-sm">supervised & unsupervised learning algorithms</p>
+                  <p className="text-text-secondary text-sm">Supervised & Unsupervised Learning Algorithms</p>
                 </div>
                 <div className="border-l border-border pl-4">
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-text-primary font-medium">deep learning</h3>
-                    <span className="text-text-muted text-sm">advanced</span>
+                    <h3 className="text-text-primary font-medium">Deep Learning</h3>
+                    <span className="text-text-muted text-sm">Advanced</span>
                   </div>
-                  <p className="text-text-secondary text-sm">neural networks & computer vision</p>
+                  <p className="text-text-secondary text-sm">Neural Networks & Computer Vision</p>
                 </div>
                 <div className="border-l border-border pl-4">
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-text-primary font-medium">data structures</h3>
+                    <h3 className="text-text-primary font-medium">Data Structures</h3>
                     <span className="text-text-muted text-sm">proficient</span>
                   </div>
-                  <p className="text-text-secondary text-sm">algorithms & problem solving</p>
+                  <p className="text-text-secondary text-sm">Algorithms & Problem Solving</p>
                 </div>
               </div>
             </div>
@@ -170,7 +170,7 @@ const Index = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-xl font-medium text-text-primary mb-8">ongoing projects</h2>
+          <h2 className="text-xl font-medium text-text-primary mb-8">Ongoing Projects</h2>
           <div className="space-y-12">
             <div className="group">
               <div className="flex justify-between items-start mb-4">
