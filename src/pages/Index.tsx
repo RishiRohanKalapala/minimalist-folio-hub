@@ -234,27 +234,28 @@ const Index = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-xl font-medium text-text-primary mb-8">Completed Projects</h2>
+          <h2 className="text-xl font-medium text-text-primary mb-8">completed projects</h2>
           <div className="space-y-12">
-            <a href="https://knots-psi.vercel.app/" className="group block">
+            <a href="/projects/weather-prediction" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
-                     Knots
+                      weather prediction model
                     </h3>
                     <span className="px-2 py-1 bg-purple-500/10 text-purple-500 text-xs rounded-full">
-                      Completed
+                      completed
                     </span>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
-                   A Fullstack Blog Platform designed with modern UI elements for a better user experience. 
+                    machine learning model for weather forecasting using historical data analysis 
+                    and time series prediction algorithms with 85% accuracy.
                   </p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
               </div>
               <div className="flex gap-2 flex-wrap">
-                {['React', 'OAuth', 'Shadcn UI', 'MongoDB','Aceternity UI'].map((tech) => (
+                {['python', 'pandas', 'scikit-learn', 'matplotlib'].map((tech) => (
                   <span key={tech} className="text-xs text-text-muted">
                     {tech}
                   </span>
@@ -262,19 +263,20 @@ const Index = () => {
               </div>
             </a>
             
-            <a href="https://medica-eta.vercel.app/" className="group block">
+            <a href="/projects/student-management-system" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
-                      HealthTalk
+                      student management system
                     </h3>
                     <span className="px-2 py-1 bg-orange-500/10 text-orange-500 text-xs rounded-full">
                       web app
                     </span>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
-                    A web-based AI platform that provides personalized medical advice based on user-reported symptoms.
+                    full-stack web application for managing student records, attendance tracking, 
+                    and grade management with secure authentication and data visualization.
                   </p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
@@ -288,25 +290,26 @@ const Index = () => {
               </div>
             </a>
 
-            <a href="https://ckrdataportal.vercel.app/" className="group block">
+            <a href="/projects/face-recognition-system" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
-                      Center for Knowledge & Resources
+                      face recognition system
                     </h3>
                     <span className="px-2 py-1 bg-teal-500/10 text-teal-500 text-xs rounded-full">
                       ai project
                     </span>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
-                    CKR (Center for Knowledge & Resources) is a dynamic digital platform dedicated to empowering students, engineers, and tech enthusiasts by offering a centralized space for continuous learning, project-based development, and career growth.
+                    real-time face detection and recognition system using computer vision 
+                    and deep learning for attendance automation and security applications.
                   </p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
               </div>
               <div className="flex gap-2 flex-wrap">
-                {['opencv', 'React', 'Next.js', 'Web Scraping','Socket.io','Prism IDE'].map((tech) => (
+                {['opencv', 'python', 'dlib', 'face_recognition'].map((tech) => (
                   <span key={tech} className="text-xs text-text-muted">
                     {tech}
                   </span>
@@ -324,21 +327,22 @@ const Index = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-xl font-medium text-text-primary mb-8">Thoughts & Writings</h2>
+          <h2 className="text-xl font-medium text-text-primary mb-8">thoughts & writings</h2>
           <div className="space-y-8">
             <a href="/blog/evolution-of-web-animation" className="group block cursor-pointer">
               <article>
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth mb-1">
-                      Traditional Coding v/s Vibe Coding
+                      the evolution of web animation
                     </h3>
                     <p className="text-text-secondary text-sm leading-relaxed">
-                      Exploring the fundamental differences between traditional coding approaches and the innovative "Vibe Coding" methodology. This article dives deep into how modern development practices can be more intuitive, efficient, and aligned with creative thinking.
+                      exploring how micro-interactions and immersive 3d experiences are reshaping 
+                      user engagement in modern web applications.
                     </p>
                   </div>
                   <div className="text-right">
-                    <time className="text-text-muted text-xs">AUG 2025</time>
+                    <time className="text-text-muted text-xs">dec 2024</time>
                     <ArrowUpRight className="w-4 h-4 text-text-muted group-hover:text-primary transition-smooth mt-1" />
                   </div>
                 </div>
@@ -350,14 +354,15 @@ const Index = () => {
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth mb-1">
-                     Comprehensive Web & App Development Roadmap
+                      building accessible design systems
                     </h3>
                     <p className="text-text-secondary text-sm leading-relaxed">
-                      Exploring the fundamental differences between traditional coding approaches and the innovative "Vibe Coding" methodology. This article dives deep into how modern development practices can be more intuitive, efficient, and aligned with creative thinking.
+                      a comprehensive guide to creating design systems that prioritize accessibility 
+                      without compromising on visual appeal.
                     </p>
                   </div>
                   <div className="text-right">
-                    <time className="text-text-muted text-xs">JUN 2025</time>
+                    <time className="text-text-muted text-xs">nov 2024</time>
                     <ArrowUpRight className="w-4 h-4 text-text-muted group-hover:text-primary transition-smooth mt-1" />
                   </div>
                 </div>
@@ -401,4 +406,3 @@ const Index = () => {
 };
 
 export default Index;
-
