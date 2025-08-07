@@ -17,35 +17,35 @@ const Index = () => {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
             <div className="flex items-start gap-8">
               <div className="w-24 h-24 rounded-2xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-2xl font-bold shadow-lg">
-                JD
+                RR
               </div>
               <div className="flex flex-col justify-center">
                 <h1 className="text-4xl md:text-5xl font-light text-text-primary mb-2 tracking-tight">
-                  john doe
+                  rishi rohan kalapala
                 </h1>
-                <p className="text-text-secondary font-medium mb-3">full stack engineer</p>
+                <p className="text-text-secondary font-medium mb-3">btech aiml final year student</p>
                 <div className="flex items-center gap-4 text-sm text-text-muted">
                   <div className="flex items-center gap-1">
                     <MapPin className="w-3 h-3" />
-                    <span>san francisco</span>
+                    <span>hyderabad</span>
                   </div>
                   <div className="flex items-center gap-1">
                     <Calendar className="w-3 h-3" />
-                    <span>25 years old</span>
+                    <span>21 years old</span>
                   </div>
                 </div>
               </div>
             </div>
             <div className="text-right">
-              <p className="text-text-secondary text-sm">available for</p>
-              <p className="text-text-primary font-medium">freelance projects</p>
+              <p className="text-text-secondary text-sm">studying at</p>
+              <p className="text-text-primary font-medium">cmr institute of technology</p>
             </div>
           </div>
         </motion.header>
 
         {/* Introduction */}
         <motion.section 
-          className="mb-18"
+          className="mb-32"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -87,7 +87,7 @@ const Index = () => {
 
         {/* Experience & Skills */}
         <motion.section 
-          className="mb-18"
+          className="mb-32"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -150,7 +150,7 @@ const Index = () => {
 
         {/* Featured Work */}
         <motion.section 
-          className="mb-18"
+          className="mb-32"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -243,7 +243,7 @@ const Index = () => {
 
         {/* Thoughts & Writings */}
         <motion.section 
-          className="mb-18"
+          className="mb-32"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
