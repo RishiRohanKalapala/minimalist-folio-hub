@@ -16,8 +16,12 @@ const Index = () => {
         >
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
             <div className="flex items-start gap-8">
-              <div className="w-24 h-24 rounded-2xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-2xl font-bold shadow-lg">
-                RR
+              <div className="w-24 h-24 rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="/lovable-uploads/7c1b4fc8-76dc-457e-8e74-733b9a243dca.png" 
+                  alt="rishi rohan kalapala"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="flex flex-col justify-center">
                 <h1 className="text-4xl md:text-5xl font-light text-text-primary mb-2 tracking-tight">
@@ -56,12 +60,12 @@ const Index = () => {
               <h2 className="text-xl font-medium text-text-primary mb-6">introduction</h2>
               <div className="space-y-5 text-text-secondary leading-relaxed text-base">
                 <p>
-                  passionate creative developer with over 5 years of experience in designing and building 
-                  digital experiences that combine aesthetics with functionality.
+                  passionate computer science student specializing in artificial intelligence and machine learning 
+                  at cmr institute of technology, exploring the intersection of technology and creativity.
                 </p>
                 <p>
-                  expertise spans across front-end development, ui/ux design, and creative coding. 
-                  believes in crafting minimal yet impactful solutions that tell a story.
+                  focused on developing innovative solutions through deep learning, data science, and 
+                  modern web technologies. always eager to learn and contribute to meaningful projects.
                 </p>
               </div>
             </div>
@@ -69,23 +73,23 @@ const Index = () => {
               <h3 className="text-lg font-medium text-text-primary mb-4">currently</h3>
               <div className="space-y-3 text-sm">
                 <div>
-                  <p className="text-text-secondary">working on</p>
-                  <p className="text-text-primary">design systems</p>
+                  <p className="text-text-secondary">learning</p>
+                  <p className="text-text-primary">machine learning</p>
                 </div>
                 <div>
-                  <p className="text-text-secondary">listening to</p>
-                  <p className="text-text-primary">ambient techno</p>
+                  <p className="text-text-secondary">building</p>
+                  <p className="text-text-primary">ai projects</p>
                 </div>
                 <div>
-                  <p className="text-text-secondary">reading</p>
-                  <p className="text-text-primary">design psychology</p>
+                  <p className="text-text-secondary">exploring</p>
+                  <p className="text-text-primary">deep learning</p>
                 </div>
               </div>
             </div>
           </div>
         </motion.section>
 
-        {/* Experience & Skills */}
+        {/* Skills & Technologies */}
         <motion.section 
           className="mb-32"
           initial={{ opacity: 0, y: 20 }}
@@ -95,60 +99,70 @@ const Index = () => {
         >
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-xl font-medium text-text-primary mb-6">experience</h2>
+              <h2 className="text-xl font-medium text-text-primary mb-6">skills & technologies</h2>
               <div className="space-y-6">
-                <div className="border-l border-border pl-4">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-text-primary font-medium">senior developer</h3>
-                    <span className="text-text-muted text-sm">2022 - now</span>
+                <div>
+                  <h3 className="text-text-primary font-medium mb-3">artificial intelligence</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {['python', 'tensorflow', 'pytorch', 'scikit-learn', 'opencv', 'numpy'].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-muted text-text-secondary text-xs rounded-full">
+                        {skill}
+                      </span>
+                    ))}
                   </div>
-                  <p className="text-text-secondary text-sm">tech startup</p>
                 </div>
-                <div className="border-l border-border pl-4">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-text-primary font-medium">frontend developer</h3>
-                    <span className="text-text-muted text-sm">2020 - 2022</span>
+                <div>
+                  <h3 className="text-text-primary font-medium mb-3">web development</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {['react', 'javascript', 'html/css', 'node.js', 'mongodb', 'git'].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-muted text-text-secondary text-xs rounded-full">
+                        {skill}
+                      </span>
+                    ))}
                   </div>
-                  <p className="text-text-secondary text-sm">digital agency</p>
                 </div>
-                <div className="border-l border-border pl-4">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-text-primary font-medium">ui/ux designer</h3>
-                    <span className="text-text-muted text-sm">2019 - 2020</span>
+                <div>
+                  <h3 className="text-text-primary font-medium mb-3">data science</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {['pandas', 'matplotlib', 'jupyter', 'sql', 'tableau', 'excel'].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-muted text-text-secondary text-xs rounded-full">
+                        {skill}
+                      </span>
+                    ))}
                   </div>
-                  <p className="text-text-secondary text-sm">freelance</p>
                 </div>
               </div>
             </div>
             <div>
-              <h2 className="text-xl font-medium text-text-primary mb-6">expertise</h2>
+              <h2 className="text-xl font-medium text-text-primary mb-6">academic focus</h2>
               <div className="space-y-6">
-                <div>
-                  <h3 className="text-text-primary font-medium mb-3">development</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {['react', 'typescript', 'next.js', 'node.js', 'tailwind', 'framer motion'].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-muted text-text-secondary text-xs rounded-full">
-                        {skill}
-                      </span>
-                    ))}
+                <div className="border-l border-border pl-4">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-text-primary font-medium">machine learning</h3>
+                    <span className="text-text-muted text-sm">current</span>
                   </div>
+                  <p className="text-text-secondary text-sm">supervised & unsupervised learning algorithms</p>
                 </div>
-                <div>
-                  <h3 className="text-text-primary font-medium mb-3">design</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {['figma', 'photoshop', 'after effects', 'principle', 'blender'].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-muted text-text-secondary text-xs rounded-full">
-                        {skill}
-                      </span>
-                    ))}
+                <div className="border-l border-border pl-4">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-text-primary font-medium">deep learning</h3>
+                    <span className="text-text-muted text-sm">advanced</span>
                   </div>
+                  <p className="text-text-secondary text-sm">neural networks & computer vision</p>
+                </div>
+                <div className="border-l border-border pl-4">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-text-primary font-medium">data structures</h3>
+                    <span className="text-text-muted text-sm">proficient</span>
+                  </div>
+                  <p className="text-text-secondary text-sm">algorithms & problem solving</p>
                 </div>
               </div>
             </div>
           </div>
         </motion.section>
 
-        {/* Featured Work */}
+        {/* ongoing projects */}
         <motion.section 
           className="mb-32"
           initial={{ opacity: 0, y: 20 }}
@@ -156,28 +170,28 @@ const Index = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-xl font-medium text-text-primary mb-8">selected work</h2>
+          <h2 className="text-xl font-medium text-text-primary mb-8">ongoing projects</h2>
           <div className="space-y-12">
             <div className="group">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
-                      designsystem.io
+                      ai chatbot platform
                     </h3>
                     <span className="px-2 py-1 bg-green-500/10 text-green-500 text-xs rounded-full">
                       in progress
                     </span>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
-                    building a comprehensive design system and component library for react applications. 
-                    currently in beta with 15+ components and growing community adoption.
+                    developing an intelligent conversational ai platform using natural language processing 
+                    and machine learning for automated customer support.
                   </p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
               </div>
               <div className="flex gap-2 flex-wrap">
-                {['react', 'typescript', 'storybook', 'figma'].map((tech) => (
+                {['python', 'tensorflow', 'flask', 'nlp'].map((tech) => (
                   <span key={tech} className="text-xs text-text-muted">
                     {tech}
                   </span>
@@ -190,21 +204,87 @@ const Index = () => {
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
-                      marketplace platform
+                      image classification system
                     </h3>
                     <span className="px-2 py-1 bg-blue-500/10 text-blue-500 text-xs rounded-full">
-                      2024
+                      research
                     </span>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
-                    full-stack e-commerce solution with real-time inventory, personalized recommendations, 
-                    and integrated payment processing serving 10k+ monthly users.
+                    building a deep learning model for medical image classification to assist 
+                    in early disease detection using convolutional neural networks.
                   </p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
               </div>
               <div className="flex gap-2 flex-wrap">
-                {['next.js', 'node.js', 'stripe', 'postgresql'].map((tech) => (
+                {['pytorch', 'opencv', 'cnn', 'python'].map((tech) => (
+                  <span key={tech} className="text-xs text-text-muted">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* completed projects */}
+        <motion.section 
+          className="mb-32"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-xl font-medium text-text-primary mb-8">completed projects</h2>
+          <div className="space-y-12">
+            <div className="group">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
+                      weather prediction model
+                    </h3>
+                    <span className="px-2 py-1 bg-purple-500/10 text-purple-500 text-xs rounded-full">
+                      completed
+                    </span>
+                  </div>
+                  <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
+                    machine learning model for weather forecasting using historical data analysis 
+                    and time series prediction algorithms with 85% accuracy.
+                  </p>
+                </div>
+                <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                {['python', 'pandas', 'scikit-learn', 'matplotlib'].map((tech) => (
+                  <span key={tech} className="text-xs text-text-muted">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <div className="group">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
+                      student management system
+                    </h3>
+                    <span className="px-2 py-1 bg-orange-500/10 text-orange-500 text-xs rounded-full">
+                      web app
+                    </span>
+                  </div>
+                  <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
+                    full-stack web application for managing student records, attendance tracking, 
+                    and grade management with secure authentication and data visualization.
+                  </p>
+                </div>
+                <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                {['react', 'node.js', 'mongodb', 'express'].map((tech) => (
                   <span key={tech} className="text-xs text-text-muted">
                     {tech}
                   </span>
@@ -217,21 +297,21 @@ const Index = () => {
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
-                      creative agency
+                      face recognition system
                     </h3>
-                    <span className="px-2 py-1 bg-purple-500/10 text-purple-500 text-xs rounded-full">
-                      award winning
+                    <span className="px-2 py-1 bg-teal-500/10 text-teal-500 text-xs rounded-full">
+                      ai project
                     </span>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
-                    award-winning agency website featuring immersive webgl animations, 
-                    custom scroll experiences, and headless cms integration.
+                    real-time face detection and recognition system using computer vision 
+                    and deep learning for attendance automation and security applications.
                   </p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
               </div>
               <div className="flex gap-2 flex-wrap">
-                {['three.js', 'gsap', 'webgl', 'contentful'].map((tech) => (
+                {['opencv', 'python', 'dlib', 'face_recognition'].map((tech) => (
                   <span key={tech} className="text-xs text-text-muted">
                     {tech}
                   </span>
