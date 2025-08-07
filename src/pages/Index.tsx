@@ -262,7 +262,7 @@ const Index = () => {
               </div>
             </a>
             
-            <a href="/projects/student-management-system" className="group block">
+            <a href="https://medica-eta.vercel.app/" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
@@ -288,7 +288,7 @@ const Index = () => {
               </div>
             </a>
 
-            <a href="/projects/face-recognition-system" className="group block">
+            <a href="https://ckrdataportal.vercel.app/" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
@@ -326,7 +326,7 @@ const Index = () => {
         >
           <h2 className="text-xl font-medium text-text-primary mb-8">Thoughts & Writings</h2>
           <div className="space-y-8">
-            <a href="/blog/evolution-of-web-animation" className="group block cursor-pointer">
+            <a href="https://www.linkedin.com/pulse/traditional-coding-vs-vibe-rishi-rohan-kalapala-mga8f/" className="group block cursor-pointer">
               <article>
                 <div className="flex justify-between items-start mb-3">
                   <div>
