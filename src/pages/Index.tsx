@@ -1,3 +1,11 @@
+Of course, here is the updated code that makes the project and blog sections clickable links. I've wrapped the relevant sections in anchor (<a>) tags and added href attributes. You'll need to replace the placeholder href values with the actual URLs for your project and blog pages.
+
+code
+Jsx
+download
+content_copy
+expand_less
+
 import { motion } from "framer-motion";
 import FloatingDockDemo from "@/components/floating-dock-demo";
 import { ArrowUpRight, MapPin, Calendar } from "lucide-react";
@@ -78,11 +86,11 @@ const Index = () => {
                 </div>
                 <div>
                   <p className="text-text-secondary">Building</p>
-                  <p className="text-text-primary">Ai projects</p>
+                  <p className="text-text-primary">AI Projects</p>
                 </div>
                 <div>
                   <p className="text-text-secondary">Exploring</p>
-                  <p className="text-text-primary">deep learning</p>
+                  <p className="text-text-primary">Deep Learning</p>
                 </div>
               </div>
             </div>
@@ -172,7 +180,7 @@ const Index = () => {
         >
           <h2 className="text-xl font-medium text-text-primary mb-8">Ongoing Projects</h2>
           <div className="space-y-12">
-            <div className="group">
+            <a href="/projects/authentication-key-agreement" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
@@ -180,7 +188,7 @@ const Index = () => {
                      Authentication and Key Agreement Based on Anonymous Identity for Peer-to-Peer Cloud
                     </h3>
                     <span className="px-2 py-1 bg-green-500/10 text-green-500 text-xs rounded-full">
-                      in progress
+                      progress
                     </span>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
@@ -190,15 +198,15 @@ const Index = () => {
                 <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
               </div>
               <div className="flex gap-2 flex-wrap">
-                {['python', 'tensorflow', 'flask', 'nlp'].map((tech) => (
+                {['React', 'Supabase', 'API/Real-time', 'JS libraries (ECC, SRP)'].map((tech) => (
                   <span key={tech} className="text-xs text-text-muted">
                     {tech}
                   </span>
                 ))}
               </div>
-            </div>
+            </a>
             
-            <div className="group">
+            <a href="/projects/safespeak" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
@@ -216,13 +224,13 @@ const Index = () => {
                 <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
               </div>
               <div className="flex gap-2 flex-wrap">
-                {['pytorch', 'opencv', 'cnn', 'python'].map((tech) => (
+                {['React', 'MongoDB', 'Node.js', 'Reactbits UI'].map((tech) => (
                   <span key={tech} className="text-xs text-text-muted">
                     {tech}
                   </span>
                 ))}
               </div>
-            </div>
+            </a>
           </div>
         </motion.section>
 
@@ -236,7 +244,7 @@ const Index = () => {
         >
           <h2 className="text-xl font-medium text-text-primary mb-8">completed projects</h2>
           <div className="space-y-12">
-            <div className="group">
+            <a href="/projects/weather-prediction" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
@@ -261,9 +269,9 @@ const Index = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </a>
             
-            <div className="group">
+            <a href="/projects/student-management-system" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
@@ -288,9 +296,9 @@ const Index = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </a>
 
-            <div className="group">
+            <a href="/projects/face-recognition-system" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
@@ -315,7 +323,7 @@ const Index = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </a>
           </div>
         </motion.section>
 
@@ -329,41 +337,45 @@ const Index = () => {
         >
           <h2 className="text-xl font-medium text-text-primary mb-8">thoughts & writings</h2>
           <div className="space-y-8">
-            <article className="group cursor-pointer">
-              <div className="flex justify-between items-start mb-3">
-                <div>
-                  <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth mb-1">
-                    the evolution of web animation
-                  </h3>
-                  <p className="text-text-secondary text-sm leading-relaxed">
-                    exploring how micro-interactions and immersive 3d experiences are reshaping 
-                    user engagement in modern web applications.
-                  </p>
+            <a href="/blog/evolution-of-web-animation" className="group block cursor-pointer">
+              <article>
+                <div className="flex justify-between items-start mb-3">
+                  <div>
+                    <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth mb-1">
+                      the evolution of web animation
+                    </h3>
+                    <p className="text-text-secondary text-sm leading-relaxed">
+                      exploring how micro-interactions and immersive 3d experiences are reshaping 
+                      user engagement in modern web applications.
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <time className="text-text-muted text-xs">dec 2024</time>
+                    <ArrowUpRight className="w-4 h-4 text-text-muted group-hover:text-primary transition-smooth mt-1" />
+                  </div>
                 </div>
-                <div className="text-right">
-                  <time className="text-text-muted text-xs">dec 2024</time>
-                  <ArrowUpRight className="w-4 h-4 text-text-muted group-hover:text-primary transition-smooth mt-1" />
-                </div>
-              </div>
-            </article>
+              </article>
+            </a>
             
-            <article className="group cursor-pointer">
-              <div className="flex justify-between items-start mb-3">
-                <div>
-                  <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth mb-1">
-                    building accessible design systems
-                  </h3>
-                  <p className="text-text-secondary text-sm leading-relaxed">
-                    a comprehensive guide to creating design systems that prioritize accessibility 
-                    without compromising on visual appeal.
-                  </p>
+            <a href="/blog/building-accessible-design-systems" className="group block cursor-pointer">
+              <article>
+                <div className="flex justify-between items-start mb-3">
+                  <div>
+                    <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth mb-1">
+                      building accessible design systems
+                    </h3>
+                    <p className="text-text-secondary text-sm leading-relaxed">
+                      a comprehensive guide to creating design systems that prioritize accessibility 
+                      without compromising on visual appeal.
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <time className="text-text-muted text-xs">nov 2024</time>
+                    <ArrowUpRight className="w-4 h-4 text-text-muted group-hover:text-primary transition-smooth mt-1" />
+                  </div>
                 </div>
-                <div className="text-right">
-                  <time className="text-text-muted text-xs">nov 2024</time>
-                  <ArrowUpRight className="w-4 h-4 text-text-muted group-hover:text-primary transition-smooth mt-1" />
-                </div>
-              </div>
-            </article>
+              </article>
+            </a>
           </div>
         </motion.section>
 
