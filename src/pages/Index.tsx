@@ -345,7 +345,7 @@ const Index = () => {
               </article>
             </a>
             
-            <a href="/blog/building-accessible-design-systems" className="group block cursor-pointer">
+            <a href="https://miro.com/app/board/uXjVIhVqoaE=/" className="group block cursor-pointer">
               <article>
                 <div className="flex justify-between items-start mb-3">
                   <div>
