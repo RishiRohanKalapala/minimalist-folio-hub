@@ -146,14 +146,14 @@ const Index = () => {
                 <div className="border-l border-border pl-4">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-text-primary font-medium">Deep Learning</h3>
-                    <span className="text-text-muted text-sm">Advanced</span>
+                    <span className="text-text-muted text-sm">Learner</span>
                   </div>
                   <p className="text-text-secondary text-sm">Neural Networks & Computer Vision</p>
                 </div>
                 <div className="border-l border-border pl-4">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-text-primary font-medium">Data Structures</h3>
-                    <span className="text-text-muted text-sm">proficient</span>
+                    <span className="text-text-muted text-sm">Learner</span>
                   </div>
                   <p className="text-text-secondary text-sm">Algorithms & Problem Solving</p>
                 </div>
@@ -177,15 +177,14 @@ const Index = () => {
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
-                      ai chatbot platform
+                     Authentication and Key Agreement Based on Anonymous Identity for Peer-to-Peer Cloud
                     </h3>
                     <span className="px-2 py-1 bg-green-500/10 text-green-500 text-xs rounded-full">
                       in progress
                     </span>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
-                    developing an intelligent conversational ai platform using natural language processing 
-                    and machine learning for automated customer support.
+                    Secure authentication and key agreement protocol using anonymous identities for peer-to-peer cloud communication.
                   </p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
@@ -204,15 +203,14 @@ const Index = () => {
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
-                      image classification system
+                      SafeSpeak
                     </h3>
                     <span className="px-2 py-1 bg-blue-500/10 text-blue-500 text-xs rounded-full">
-                      research
+                      Web App
                     </span>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
-                    building a deep learning model for medical image classification to assist 
-                    in early disease detection using convolutional neural networks.
+                   A web platform allowing anonymous submissions with end-to-end encryption, stored on a decentralized network (IPFS) to prevent tracing. Organizations can respond publicly without accessing submitter identities.
                   </p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
