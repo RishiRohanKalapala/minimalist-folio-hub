@@ -51,7 +51,7 @@ export default function FloatingDockDemo() {
       icon: (
         <IconMail className="h-full w-full text-text-secondary hover:text-text-primary transition-smooth" />
       ),
-      href: "rishirohankalapala@gmail.com",
+      href: "mailto:rishirohankalapala@gmail.com",
     },
   ];
   
