@@ -16,42 +16,42 @@ export default function FloatingDockDemo() {
       icon: (
         <IconWorld className="h-full w-full text-text-secondary hover:text-text-primary transition-smooth" />
       ),
-      href: "#",
+      href: "https://ckrdataportal.vercel.app/",
     },
     {
       title: "LinkedIn",
       icon: (
         <IconBrandLinkedin className="h-full w-full text-text-secondary hover:text-text-primary transition-smooth" />
       ),
-      href: "#",
+      href: "https://www.linkedin.com/in/rishirohankalapala/",
     },
     {
       title: "GitHub",
       icon: (
         <IconBrandGithub className="h-full w-full text-text-secondary hover:text-text-primary transition-smooth" />
       ),
-      href: "#",
+      href: "https://github.com/RishiRohanKalapala",
     },
     {
       title: "Twitter",
       icon: (
         <IconBrandX className="h-full w-full text-text-secondary hover:text-text-primary transition-smooth" />
       ),
-      href: "#",
+      href: "https://x.com/Aithrivestartup",
     },
     {
       title: "Instagram",
       icon: (
         <IconBrandInstagram className="h-full w-full text-text-secondary hover:text-text-primary transition-smooth" />
       ),
-      href: "#",
+      href: "https://www.instagram.com/rishi.rhn?igsh=Z3B1Z2FiaDk2am5n&utm_source=qr",
     },
     {
       title: "Email",
       icon: (
         <IconMail className="h-full w-full text-text-secondary hover:text-text-primary transition-smooth" />
       ),
-      href: "mailto:hello@example.com",
+      href: "rishirohankalapala@gmail.com",
     },
   ];
   
