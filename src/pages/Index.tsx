@@ -234,7 +234,7 @@ const Index = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-xl font-medium text-text-primary mb-8">completed projects</h2>
+          <h2 className="text-xl font-medium text-text-primary mb-8">Completed Projects</h2>
           <div className="space-y-12">
             <a href="/projects/weather-prediction" className="group block">
               <div className="flex justify-between items-start mb-4">
@@ -267,15 +267,14 @@ const Index = () => {
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
-                      student management system
+                      HealthTalk
                     </h3>
                     <span className="px-2 py-1 bg-orange-500/10 text-orange-500 text-xs rounded-full">
-                      web app
+                      Web App
                     </span>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
-                    full-stack web application for managing student records, attendance tracking, 
-                    and grade management with secure authentication and data visualization.
+                    A web-based AI platform that provides personalized medical advice based on user-reported symptoms.
                   </p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
@@ -294,21 +293,20 @@ const Index = () => {
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
-                      face recognition system
+                      Center for Knowledge & Resources
                     </h3>
                     <span className="px-2 py-1 bg-teal-500/10 text-teal-500 text-xs rounded-full">
-                      ai project
+                      AI Project
                     </span>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
-                    real-time face detection and recognition system using computer vision 
-                    and deep learning for attendance automation and security applications.
+                    CKR (Center for Knowledge & Resources) is a dynamic digital platform dedicated to empowering students, engineers, and tech enthusiasts by offering a centralized space for continuous learning, project-based development, and career growth.
                   </p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
               </div>
               <div className="flex gap-2 flex-wrap">
-                {['opencv', 'python', 'dlib', 'face_recognition'].map((tech) => (
+                {['React', 'Next.js', 'Web Scraping','Socket.io','Prism IDE'].map((tech) => (
                   <span key={tech} className="text-xs text-text-muted">
                     {tech}
                   </span>
