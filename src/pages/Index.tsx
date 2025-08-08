@@ -172,7 +172,7 @@ const Index = () => {
         >
           <h2 className="text-xl font-medium text-text-primary mb-8">Ongoing Projects</h2>
           <div className="space-y-12">
-            <a href="/projects/authentication-key-agreement" className="group block">
+            <a href="https://github.com/RishiRohanKalapala-cloud/Authentication-and-Key-Agreement-Based-on-Anonymous-Identity-for-Peer-to-Peer-Cloud" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
@@ -198,7 +198,7 @@ const Index = () => {
               </div>
             </a>
             
-            <a href="/projects/safespeak" className="group block">
+            <a href="https://github.com/RishiRohanKalapala-cloud/Safespeak" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
