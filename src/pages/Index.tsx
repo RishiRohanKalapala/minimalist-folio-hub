@@ -313,6 +313,32 @@ const Index = () => {
                 ))}
               </div>
             </a>
+
+            <a href="https://github.com/RishiRohanKalapala-cloud/DripMsg" className="group block">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
+                      DripMsg
+                    </h3>
+                    <span className="px-2 py-1 bg-emerald-500/10 text-emerald-500 text-xs rounded-full">
+                      Completed
+                    </span>
+                  </div>
+                  <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
+                    A real-time chat application built with Next.js, Socket.IO, and TypeScript.
+                  </p>
+                </div>
+                <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                {["Next.js", "Socket.IO", "TypeScript"].map((tech) => (
+                  <span key={tech} className="text-xs text-text-muted">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </a>
           </div>
         </motion.section>
 
