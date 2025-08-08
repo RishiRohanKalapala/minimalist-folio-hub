@@ -19,7 +19,7 @@ const Index = () => {
             <div className="flex items-start gap-8">
               <div className="w-24 h-24 rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="/lovable-uploads/7c1b4fc8-76dc-457e-8e74-733b9a243dca.png" 
+                  src="https://www.fomostore.in/cdn/shop/products/Brothers-Innovation-Stickers-Anime-Gojo_Chibi-Image-1.jpg?v=1738334535" 
                   alt="rishi rohan kalapala"
                   className="w-full h-full object-cover"
                 />
