@@ -30,7 +30,7 @@ export default function FloatingDockDemo() {
       icon: (
         <IconBrandGithub className="h-full w-full text-text-secondary hover:text-text-primary transition-smooth" />
       ),
-      href: "https://github.com/RishiRohanKalapala",
+      href: "https://github.com/RishiRohanKalapala-cloud",
     },
     {
       title: "Twitter",
