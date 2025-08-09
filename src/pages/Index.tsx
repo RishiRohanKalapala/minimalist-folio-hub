@@ -7,7 +7,7 @@ import Ribbons from "@/components/ui/Ribbons";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="fixed inset-0 -z-10">
+      <div className="fixed inset-0 z-0 pointer-events-none">
         <Ribbons
           baseThickness={30}
           colors={["#ffffff"]}
