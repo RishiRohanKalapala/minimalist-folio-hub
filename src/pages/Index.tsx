@@ -2,10 +2,21 @@ import { motion } from "framer-motion";
 import FloatingDockDemo from "@/components/floating-dock-demo";
 import { ArrowUpRight, MapPin, Calendar } from "lucide-react";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
+import Ribbons from "@/components/ui/Ribbons";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <div className="fixed inset-0 -z-10">
+        <Ribbons
+          baseThickness={30}
+          colors={["#ffffff"]}
+          speedMultiplier={0.5}
+          maxAge={500}
+          enableFade={false}
+          enableShaderEffect={true}
+        />
+      </div>
       <div className="max-w-3xl mx-auto px-8 py-20">
         
         {/* Header Section */}
