@@ -16,7 +16,7 @@ export default function FloatingDockDemo() {
       icon: (
         <IconWorld className="h-full w-full text-text-secondary hover:text-text-primary transition-smooth" />
       ),
-      href: "https://ckrdataportal.vercel.app/",
+      href: "https://ckrdatacenter.vercel.app/",
     },
     {
       title: "LinkedIn",

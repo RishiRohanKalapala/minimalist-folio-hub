@@ -3,6 +3,7 @@ import FloatingDockDemo from "@/components/floating-dock-demo";
 import { ArrowUpRight, MapPin, Calendar } from "lucide-react";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import Ribbons from "@/components/ui/Ribbons";
+import VortexDemo from "@/components/ui/vortex-demo";
 
 const Index = () => {
   return (
@@ -99,6 +100,17 @@ const Index = () => {
               </div>
             </div>
           </div>
+        </motion.section>
+
+        {/* CKR Vortex Section */}
+        <motion.section 
+          className="mb-32"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <VortexDemo />
         </motion.section>
 
         {/* Skills & Technologies */}
