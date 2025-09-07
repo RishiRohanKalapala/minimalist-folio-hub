@@ -8,16 +8,6 @@ import VortexDemo from "@/components/ui/vortex-demo";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <Ribbons
-          baseThickness={30}
-          colors={["#ffffff"]}
-          speedMultiplier={0.5}
-          maxAge={500}
-          enableFade={false}
-          enableShaderEffect={true}
-        />
-      </div>
       <div className="max-w-3xl mx-auto px-8 py-20">
         
         {/* Header Section */}
@@ -102,16 +92,6 @@ const Index = () => {
           </div>
         </motion.section>
 
-        {/* CKR Vortex Section */}
-        <motion.section 
-          className="mb-32"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <VortexDemo />
-        </motion.section>
 
         {/* Skills & Technologies */}
         <motion.section 
@@ -278,31 +258,36 @@ const Index = () => {
               </div>
             </a>
 
-            <a href="https://www.ckrdatapoint.in/" className="group block">
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
-                      CKR-Datapoint
-                    </h3>
-                    <span className="px-2 py-1 bg-amber-500/10 text-amber-500 text-xs rounded-full">
-                      startup
-                    </span>
+            <div className="relative p-1 rounded-lg bg-gradient-to-r from-primary to-primary/60 hover-scale">
+              <a href="https://www.ckrdatapoint.in/" className="group block bg-background rounded-md p-6 transition-all duration-300 hover:shadow-xl">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
+                        CKR-Datapoint
+                      </h3>
+                      <span className="px-2 py-1 bg-amber-500/10 text-amber-500 text-xs rounded-full">
+                        startup
+                      </span>
+                      <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full animate-pulse">
+                        Featured
+                      </span>
+                    </div>
+                    <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
+                      A premier educational experience designed to help you plan, learn, and achieve your academic and professional goals.
+                    </p>
                   </div>
-                  <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
-                    A premier educational experience designed to help you plan, learn, and achieve your academic and professional goals.
-                  </p>
+                  <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
                 </div>
-                <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
-              </div>
-              <div className="flex gap-2 flex-wrap">
-                {['React', 'Next.js', 'Educational Platform', 'AI-powered'].map((tech) => (
-                  <span key={tech} className="text-xs text-text-muted">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </a>
+                <div className="flex gap-2 flex-wrap">
+                  {['React', 'Next.js', 'Educational Platform', 'AI-powered'].map((tech) => (
+                    <span key={tech} className="text-xs text-text-muted">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </a>
+            </div>
             <div className="mt-3">
               <p className="text-xs text-text-muted mb-2">Contributors</p>
               <div className="flex items-center gap-2">
