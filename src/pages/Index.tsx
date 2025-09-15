@@ -187,8 +187,8 @@ const Index = () => {
                       <span className="px-2 py-1 bg-amber-500/10 text-amber-500 text-xs rounded-full">
                         startup
                       </span>
-                      <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full animate-pulse">
-                        Featured
+                      <span className="px-2 py-1 bg-green-500/10 text-green-500 text-xs rounded-full animate-pulse">
+                        Active
                       </span>
                     </div>
                     <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
@@ -268,6 +268,66 @@ const Index = () => {
                 <div className="flex gap-3">
                   <span className="text-xs text-text-secondary">Projx</span>
                   <span className="text-xs text-text-secondary">StudentForge</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative p-1 rounded-lg bg-gradient-to-r from-pink-500 to-red-500 hover-scale">
+              <div className="group block bg-background rounded-md p-6 transition-all duration-300 hover:shadow-xl">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
+                        Abhaya
+                      </h3>
+                      <span className="px-2 py-1 bg-pink-500/10 text-pink-500 text-xs rounded-full">
+                        Safety App
+                      </span>
+                      <span className="px-2 py-1 bg-red-500/10 text-red-500 text-xs rounded-full animate-pulse">
+                        New
+                      </span>
+                    </div>
+                    <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
+                      A comprehensive safety platform addressing harassment, unsafe public spaces, and providing immediate help for women and children in India. Building unified solutions where existing systems fail.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-2 flex-wrap">
+                  {['React Native', 'Real-time GPS', 'Emergency Services', 'Community Safety', 'AI Detection'].map((tech) => (
+                    <span key={tech} className="text-xs text-text-muted">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="mt-3">
+              <p className="text-xs text-text-muted mb-2">Development Team</p>
+              <div className="flex items-center gap-2">
+                <AnimatedTooltip
+                  items={[
+                    {
+                      id: 1,
+                      name: "Rishi Rohan Kalapala",
+                      designation: "Project Lead & Backend",
+                      image: "https://avatars.githubusercontent.com/u/7940844?s=80&v=4",
+                    },
+                    {
+                      id: 2,
+                      name: "Safety Team",
+                      designation: "Research & Design",
+                      image: "https://github.com/identicons/safety.png",
+                    },
+                  ]}
+                />
+              </div>
+              <div className="mt-4">
+                <p className="text-xs text-text-muted mb-2">Impact Areas</p>
+                <div className="flex gap-3 flex-wrap">
+                  <span className="text-xs text-text-secondary">Women Safety</span>
+                  <span className="text-xs text-text-secondary">Child Protection</span>
+                  <span className="text-xs text-text-secondary">Community Support</span>
+                  <span className="text-xs text-text-secondary">Emergency Response</span>
                 </div>
               </div>
             </div>
@@ -616,20 +676,111 @@ const Index = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-xl font-medium text-text-primary mb-6">collaborations</h2>
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <p className="text-text-secondary leading-relaxed">
-              had the privilege of working with forward-thinking companies and creative teams 
-              around the world, helping them craft digital experiences that matter.
+          <h2 className="text-xl font-medium text-text-primary mb-8">Collaborations & Partnerships</h2>
+          
+          {/* Introduction */}
+          <div className="mb-12 max-w-2xl">
+            <p className="text-text-secondary leading-relaxed mb-6">
+              Building meaningful partnerships with innovative organizations, startups, and creative teams worldwide. 
+              Focused on creating impactful digital solutions and fostering collaborative growth.
             </p>
-            <div className="space-y-2">
-              <p className="text-sm text-text-secondary">selected clients include</p>
-              <div className="flex flex-wrap gap-x-6 gap-y-2">
-                {['techcorp', 'Siya Jewellery', 'Grow & Learn Academy'].map((client) => (
-                  <span key={client} className="text-text-primary text-sm font-medium">
-                    {client}
-                  </span>
-                ))}
+          </div>
+
+          {/* Partner Categories */}
+          <div className="space-y-12">
+            {/* Current Partners */}
+            <div>
+              <h3 className="text-lg font-medium text-text-primary mb-6 flex items-center gap-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                Active Partners
+              </h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="group p-6 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-card">
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="font-medium text-text-primary group-hover:text-primary transition-smooth">TechCorp</h4>
+                    <span className="text-xs text-green-500 bg-green-500/10 px-2 py-1 rounded-full">Active</span>
+                  </div>
+                  <p className="text-sm text-text-secondary mb-3">
+                    Technology consulting and digital transformation solutions.
+                  </p>
+                  <div className="text-xs text-text-muted">Since 2024 • Ongoing</div>
+                </div>
+
+                <div className="group p-6 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-card">
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="font-medium text-text-primary group-hover:text-primary transition-smooth">Siya Jewellery</h4>
+                    <span className="text-xs text-blue-500 bg-blue-500/10 px-2 py-1 rounded-full">E-commerce</span>
+                  </div>
+                  <p className="text-sm text-text-secondary mb-3">
+                    Custom e-commerce platform development and digital marketing solutions.
+                  </p>
+                  <div className="text-xs text-text-muted">Since 2024 • Ongoing</div>
+                </div>
+
+                <div className="group p-6 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-card">
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="font-medium text-text-primary group-hover:text-primary transition-smooth">Grow & Learn Academy</h4>
+                    <span className="text-xs text-purple-500 bg-purple-500/10 px-2 py-1 rounded-full">EdTech</span>
+                  </div>
+                  <p className="text-sm text-text-secondary mb-3">
+                    Educational platform development and learning management systems.
+                  </p>
+                  <div className="text-xs text-text-muted">Since 2024 • Ongoing</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Strategic Partnerships */}
+            <div>
+              <h3 className="text-lg font-medium text-text-primary mb-6 flex items-center gap-2">
+                <span className="w-2 h-2 bg-primary rounded-full"></span>
+                Strategic Partnerships
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="group p-6 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-card">
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="font-medium text-text-primary group-hover:text-primary transition-smooth">Projx</h4>
+                    <span className="text-xs text-amber-500 bg-amber-500/10 px-2 py-1 rounded-full">Innovation</span>
+                  </div>
+                  <p className="text-sm text-text-secondary mb-3">
+                    Collaborative innovation in project management and development workflows.
+                  </p>
+                  <div className="text-xs text-text-muted">Partnership • CKR-Datapoint</div>
+                </div>
+
+                <div className="group p-6 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-card">
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="font-medium text-text-primary group-hover:text-primary transition-smooth">StudentForge</h4>
+                    <span className="text-xs text-emerald-500 bg-emerald-500/10 px-2 py-1 rounded-full">Education</span>
+                  </div>
+                  <p className="text-sm text-text-secondary mb-3">
+                    Student-focused platform integration and educational resource sharing.
+                  </p>
+                  <div className="text-xs text-text-muted">Partnership • CKR-Datapoint</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Collaboration Stats */}
+            <div className="mt-12 p-6 rounded-lg bg-muted/20 border border-border">
+              <h3 className="text-lg font-medium text-text-primary mb-6">Collaboration Impact</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary mb-2">5+</div>
+                  <div className="text-xs text-text-muted uppercase tracking-wide">Active Partners</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary mb-2">10+</div>
+                  <div className="text-xs text-text-muted uppercase tracking-wide">Projects Delivered</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary mb-2">3</div>
+                  <div className="text-xs text-text-muted uppercase tracking-wide">Industries</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary mb-2">2+</div>
+                  <div className="text-xs text-text-muted uppercase tracking-wide">Years Experience</div>
+                </div>
               </div>
             </div>
           </div>
