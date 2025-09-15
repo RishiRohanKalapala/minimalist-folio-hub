@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
 import FloatingDockDemo from "@/components/floating-dock-demo";
-import { ArrowUpRight, MapPin, Calendar } from "lucide-react";
+import { ArrowUpRight, MapPin, Calendar, Mail } from "lucide-react";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import Ribbons from "@/components/ui/Ribbons";
 import VortexDemo from "@/components/ui/vortex-demo";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="max-w-3xl mx-auto px-8 py-20">
@@ -31,7 +35,7 @@ const Index = () => {
                   Rishi Rohan Kalapala
                 </h1>
                 <p className="text-text-secondary font-medium mb-3">Btech AIML Final Year Student</p>
-                <div className="flex items-center gap-4 text-sm text-text-muted">
+                <div className="flex items-center gap-4 text-sm text-text-muted mb-4">
                   <div className="flex items-center gap-1">
                     <MapPin className="w-3 h-3" />
                     <span>Hyderabad</span>
@@ -41,6 +45,15 @@ const Index = () => {
                     <span>21 years old</span>
                   </div>
                 </div>
+                <Button 
+                  onClick={() => navigate('/contact')}
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center gap-2 w-fit"
+                >
+                  <Mail className="w-4 h-4" />
+                  Contact Me
+                </Button>
               </div>
             </div>
             <div className="text-right">
