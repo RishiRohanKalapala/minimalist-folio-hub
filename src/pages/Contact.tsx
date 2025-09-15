@@ -10,6 +10,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+import { useState } from "react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -22,6 +24,7 @@ type FormData = z.infer<typeof formSchema>;
 
 const Contact = () => {
   const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -33,11 +36,31 @@ const Contact = () => {
     },
   });
 
-  const onSubmit = (data: FormData) => {
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", data);
-    toast.success("Message sent successfully! I'll get back to you soon.");
-    form.reset();
+  const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    
+    try {
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert({
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        });
+
+      if (error) {
+        throw error;
+      }
+
+      toast.success("Message sent successfully! I'll get back to you soon.");
+      form.reset();
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
+      toast.error("Failed to send message. Please try again or contact me directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -198,8 +221,8 @@ const Contact = () => {
                         </FormItem>
                       )}
                     />
-                    <Button type="submit" className="w-full">
-                      Send Message
+                    <Button type="submit" className="w-full" disabled={isSubmitting}>
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
                   </form>
                 </Form>
