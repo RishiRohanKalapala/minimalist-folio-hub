@@ -722,7 +722,7 @@ const Index = () => {
                 <div className="group p-6 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-card">
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="font-medium text-text-primary group-hover:text-primary transition-smooth">Siya Jewellery</h4>
-                    <span className="text-xs text-blue-500 bg-blue-500/10 px-2 py-1 rounded-full">E-commerce</span>
+                    <span className="text-xs text-blue-500 bg-blue-500/10 px-2 py-1 rounded-full">E-com</span>
                   </div>
                   <p className="text-sm text-text-secondary mb-3">
                     Custom e-commerce platform development and digital marketing solutions.
