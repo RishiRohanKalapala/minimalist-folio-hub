@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import FloatingDockDemo from "@/components/floating-dock-demo";
-import { ArrowUpRight, MapPin, Calendar, Mail } from "lucide-react";
+import { ArrowUpRight, MapPin, Calendar, Mail, FileText } from "lucide-react";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import Ribbons from "@/components/ui/Ribbons";
 import VortexDemo from "@/components/ui/vortex-demo";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -342,6 +342,15 @@ const Index = () => {
                   <span className="text-xs text-text-secondary">Community Support</span>
                   <span className="text-xs text-text-secondary">Emergency Response</span>
                 </div>
+              </div>
+              <div className="mt-4">
+                <Link 
+                  to="/abhaya-docs" 
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-red-500 text-white text-sm font-medium rounded-lg hover:shadow-lg transition-all duration-300"
+                >
+                  <FileText size={16} />
+                  View Project Docs
+                </Link>
               </div>
             </div>
 
