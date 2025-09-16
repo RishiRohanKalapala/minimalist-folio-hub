@@ -1,25 +1,97 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Shield, Users, Globe, Smartphone, Cloud, Zap } from "lucide-react";
+import { ArrowLeft, Users, Globe, Smartphone, Cloud, Zap, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { Button } from "@/components/ui/button";
 
 export default function AbhayaDocs() {
+  const [likeCount, setLikeCount] = useState(0);
+  const [isLiking, setIsLiking] = useState(false);
+
+  useEffect(() => {
+    // Fetch initial like count
+    const fetchLikeCount = async () => {
+      const { data } = await supabase
+        .from('project_likes')
+        .select('likes_count')
+        .eq('project_name', 'abhaya')
+        .single();
+      
+      if (data) {
+        setLikeCount(data.likes_count);
+      }
+    };
+
+    fetchLikeCount();
+
+    // Subscribe to real-time updates
+    const channel = supabase
+      .channel('schema-db-changes')
+      .on(
+        'postgres_changes',
+        {
+          event: 'UPDATE',
+          schema: 'public',
+          table: 'project_likes',
+          filter: 'project_name=eq.abhaya'
+        },
+        (payload) => {
+          if (payload.new && typeof payload.new.likes_count === 'number') {
+            setLikeCount(payload.new.likes_count);
+          }
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
+  }, []);
+
+  const handleContribute = async () => {
+    if (isLiking) return;
+    
+    setIsLiking(true);
+    try {
+      const { error } = await supabase
+        .from('project_likes')
+        .update({ likes_count: likeCount + 1 })
+        .eq('project_name', 'abhaya');
+      
+      if (error) {
+        console.error('Error updating like count:', error);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    } finally {
+      setIsLiking(false);
+    }
+  };
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-background/80 backdrop-blur-lg sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center gap-4">
-            <Link 
-              to="/" 
-              className="flex items-center gap-2 text-text-secondary hover:text-primary transition-colors"
-            >
-              <ArrowLeft size={20} />
-              Back to Portfolio
-            </Link>
-            <div className="flex items-center gap-3">
-              <Shield className="text-pink-500" size={24} />
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <Link 
+                to="/" 
+                className="flex items-center gap-2 text-text-secondary hover:text-primary transition-colors"
+              >
+                <ArrowLeft size={20} />
+                Back to Portfolio
+              </Link>
               <h1 className="text-xl font-semibold text-text-primary">Abhaya Documentation</h1>
             </div>
+            <Button 
+              onClick={handleContribute}
+              disabled={isLiking}
+              className="flex items-center gap-2 bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white"
+            >
+              <Heart size={16} className={isLiking ? "animate-pulse" : ""} />
+              Contribute ({likeCount})
+            </Button>
           </div>
         </div>
       </header>
@@ -34,7 +106,6 @@ export default function AbhayaDocs() {
           {/* Project Header */}
           <div className="text-center mb-12">
             <div className="flex justify-center items-center gap-3 mb-4">
-              <Shield className="text-pink-500" size={32} />
               <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-500 to-red-500 bg-clip-text text-transparent">
                 Abhaya
               </h1>
