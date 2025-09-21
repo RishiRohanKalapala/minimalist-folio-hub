@@ -637,7 +637,7 @@ const Index = () => {
               </div>
             </a>
 
-            <a href="#" className="group block">
+            <a href="https://csdaiclub.vercel.app/" target="_blank" rel="noopener noreferrer" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
