@@ -636,6 +636,32 @@ const Index = () => {
                 ))}
               </div>
             </a>
+
+            <a href="#" className="group block">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
+                      CSD AI Club web page
+                    </h3>
+                    <span className="px-2 py-1 bg-indigo-500/10 text-indigo-500 text-xs rounded-full">
+                      Club Website
+                    </span>
+                  </div>
+                  <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
+                    A club showcase web page for the CSDAI club of CMRIT Hyderabad campus, featuring club activities, events, and member profiles.
+                  </p>
+                </div>
+                <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                {["React", "Tailwind CSS", "JavaScript"].map((tech) => (
+                  <span key={tech} className="text-xs text-text-muted">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </a>
           </div>
         </motion.section>
 
@@ -748,6 +774,17 @@ const Index = () => {
                     Educational platform development and learning management systems.
                   </p>
                   <div className="text-xs text-text-muted">Since 2024 • Ongoing</div>
+                </div>
+
+                <div className="group p-6 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-card">
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="font-medium text-text-primary group-hover:text-primary transition-smooth">NSS CMRIT</h4>
+                    <span className="text-xs text-orange-500 bg-orange-500/10 px-2 py-1 rounded-full">Non-Profit</span>
+                  </div>
+                  <p className="text-sm text-text-secondary mb-3">
+                    NSS Volunteer Management System development for CMRIT campus community service activities.
+                  </p>
+                  <div className="text-xs text-text-muted">Since 2025 • Present</div>
                 </div>
               </div>
             </div>
