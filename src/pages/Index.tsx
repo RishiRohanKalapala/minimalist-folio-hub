@@ -5,6 +5,7 @@ import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import Ribbons from "@/components/ui/Ribbons";
 import VortexDemo from "@/components/ui/vortex-demo";
 import { Button } from "@/components/ui/button";
+import { LeetCodeStats } from "@/components/LeetCodeStats";
 import { useNavigate, Link } from "react-router-dom";
 
 const Index = () => {
@@ -85,22 +86,26 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            <div>
-              <h3 className="text-lg font-medium text-text-primary mb-4">Currently</h3>
-              <div className="space-y-3 text-sm">
-                <div>
-                  <p className="text-text-secondary">Learning</p>
-                  <p className="text-text-primary">Machine Learning</p>
-                </div>
-                <div>
-                  <p className="text-text-secondary">Building</p>
-                  <p className="text-text-primary">AI Projects</p>
-                </div>
-                <div>
-                  <p className="text-text-secondary">Exploring</p>
-                  <p className="text-text-primary">Deep Learning</p>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-medium text-text-primary mb-4">Currently</h3>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <p className="text-text-secondary">Learning</p>
+                    <p className="text-text-primary">Machine Learning</p>
+                  </div>
+                  <div>
+                    <p className="text-text-secondary">Building</p>
+                    <p className="text-text-primary">AI Projects</p>
+                  </div>
+                  <div>
+                    <p className="text-text-secondary">Exploring</p>
+                    <p className="text-text-primary">Deep Learning</p>
+                  </div>
                 </div>
               </div>
+              
+              <LeetCodeStats username="22r01a7335" />
             </div>
           </div>
         </motion.section>
