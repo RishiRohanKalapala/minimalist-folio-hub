@@ -64,6 +64,19 @@ const Index = () => {
           </div>
         </motion.header>
 
+        {/* LeetCode Stats Section */}
+        <motion.section 
+          className="mb-32"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="max-w-2xl mx-auto">
+            <LeetCodeStats username="22r01a7335" />
+          </div>
+        </motion.section>
+
         {/* Introduction */}
         <motion.section 
           className="mb-32"
@@ -86,26 +99,22 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-medium text-text-primary mb-4">Currently</h3>
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <p className="text-text-secondary">Learning</p>
-                    <p className="text-text-primary">Machine Learning</p>
-                  </div>
-                  <div>
-                    <p className="text-text-secondary">Building</p>
-                    <p className="text-text-primary">AI Projects</p>
-                  </div>
-                  <div>
-                    <p className="text-text-secondary">Exploring</p>
-                    <p className="text-text-primary">Deep Learning</p>
-                  </div>
+            <div>
+              <h3 className="text-lg font-medium text-text-primary mb-4">Currently</h3>
+              <div className="space-y-3 text-sm">
+                <div>
+                  <p className="text-text-secondary">Learning</p>
+                  <p className="text-text-primary">Machine Learning</p>
+                </div>
+                <div>
+                  <p className="text-text-secondary">Building</p>
+                  <p className="text-text-primary">AI Projects</p>
+                </div>
+                <div>
+                  <p className="text-text-secondary">Exploring</p>
+                  <p className="text-text-primary">Deep Learning</p>
                 </div>
               </div>
-              
-              <LeetCodeStats username="22r01a7335" />
             </div>
           </div>
         </motion.section>
