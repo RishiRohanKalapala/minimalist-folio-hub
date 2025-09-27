@@ -8,6 +8,7 @@ import {
   IconBrandInstagram,
   IconWorld,
 } from "@tabler/icons-react";
+import leetcodeLogo from "@/assets/leetcode-logo.png";
 
 export default function FloatingDockDemo() {
   const links = [
@@ -17,6 +18,13 @@ export default function FloatingDockDemo() {
         <IconWorld className="h-full w-full text-text-secondary hover:text-text-primary transition-smooth" />
       ),
       href: "https://ckrdatacenter.vercel.app/",
+    },
+    {
+      title: "LeetCode",
+      icon: (
+        <img src={leetcodeLogo} alt="LeetCode" className="h-full w-full object-contain filter brightness-75 hover:brightness-100 transition-all" />
+      ),
+      href: "https://leetcode.com/u/22r01a7335/",
     },
     {
       title: "LinkedIn",
