@@ -754,7 +754,7 @@ const Index = () => {
             <div>
               <h3 className="text-lg font-medium text-text-primary mb-6 flex items-center gap-2">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                Active Partners
+                Active Clients
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="group p-6 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-card">
@@ -768,7 +768,12 @@ const Index = () => {
                   <div className="text-xs text-text-muted">Since 2024 • Ongoing</div>
                 </div>
 
-                <div className="group p-6 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-card">
+                <a 
+                  href="https://siyacollections.shop/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group p-6 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-card block"
+                >
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="font-medium text-text-primary group-hover:text-primary transition-smooth">Siya Jewellery</h4>
                     <span className="text-xs text-blue-500 bg-blue-500/10 px-2 py-1 rounded-full">E-com</span>
@@ -777,7 +782,7 @@ const Index = () => {
                     Custom e-commerce platform development and digital marketing solutions.
                   </p>
                   <div className="text-xs text-text-muted">Since 2024 • Ongoing</div>
-                </div>
+                </a>
 
                 <div className="group p-6 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-card">
                   <div className="flex items-center justify-between mb-4">
@@ -790,7 +795,12 @@ const Index = () => {
                   <div className="text-xs text-text-muted">Since 2024 • Ongoing</div>
                 </div>
 
-                <div className="group p-6 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-card">
+                <a 
+                  href="https://nsscmritvolunteers.vercel.app/auth" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group p-6 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-card block"
+                >
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="font-medium text-text-primary group-hover:text-primary transition-smooth">NSS CMRIT</h4>
                     <span className="text-xs text-orange-500 bg-orange-500/10 px-2 py-1 rounded-full">Non-Profit</span>
@@ -799,7 +809,23 @@ const Index = () => {
                     NSS Volunteer Management System development for CMRIT campus community service activities.
                   </p>
                   <div className="text-xs text-text-muted">Since 2025 • Present</div>
-                </div>
+                </a>
+
+                <a 
+                  href="https://www.storiesatscale.in/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group p-6 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-card block"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="font-medium text-text-primary group-hover:text-primary transition-smooth">Stories at Scale</h4>
+                    <span className="text-xs text-pink-500 bg-pink-500/10 px-2 py-1 rounded-full">Agency</span>
+                  </div>
+                  <p className="text-sm text-text-secondary mb-3">
+                    Personal branding for founders, powered by short videos.
+                  </p>
+                  <div className="text-xs text-text-muted">Since 2025 • Present</div>
+                </a>
               </div>
             </div>
 
@@ -839,8 +865,8 @@ const Index = () => {
               <h3 className="text-lg font-medium text-text-primary mb-6">Collaboration Impact</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary mb-2">5+</div>
-                  <div className="text-xs text-text-muted uppercase tracking-wide">Active Partners</div>
+                  <div className="text-2xl font-bold text-primary mb-2">6+</div>
+                  <div className="text-xs text-text-muted uppercase tracking-wide">Active Clients</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary mb-2">10+</div>
