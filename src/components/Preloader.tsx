@@ -42,7 +42,9 @@ export const Preloader = ({ onComplete }: { onComplete: () => void }) => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.2 }}
           transition={{ duration: 0.5 }}
-          className="text-5xl md:text-7xl font-light text-text-primary"
+          className={`text-5xl md:text-7xl font-light ${
+            currentIndex === 6 ? 'text-red-600' : 'text-text-primary'
+          }`}
         >
           {greetings[currentIndex]}
         </motion.div>
