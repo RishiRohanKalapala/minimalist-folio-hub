@@ -18,12 +18,12 @@ export const Preloader = ({ onComplete }: { onComplete: () => void }) => {
     if (currentIndex < greetings.length - 1) {
       const timer = setTimeout(() => {
         setCurrentIndex(currentIndex + 1);
-      }, 400);
+      }, 1000);
       return () => clearTimeout(timer);
     } else {
       const finalTimer = setTimeout(() => {
         onComplete();
-      }, 600);
+      }, 1000);
       return () => clearTimeout(finalTimer);
     }
   }, [currentIndex, onComplete]);
@@ -41,7 +41,7 @@ export const Preloader = ({ onComplete }: { onComplete: () => void }) => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.2 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.5 }}
           className="text-5xl md:text-7xl font-light text-text-primary"
         >
           {greetings[currentIndex]}
