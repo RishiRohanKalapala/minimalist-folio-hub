@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import FloatingDockDemo from "@/components/floating-dock-demo";
 import { ArrowUpRight, MapPin, Calendar, Mail, FileText } from "lucide-react";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
@@ -7,12 +7,20 @@ import VortexDemo from "@/components/ui/vortex-demo";
 import { Button } from "@/components/ui/button";
 import { LeetCodeStats } from "@/components/LeetCodeStats";
 import { useNavigate, Link } from "react-router-dom";
+import { Preloader } from "@/components/Preloader";
+import { useState } from "react";
 
 const Index = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <>
+      <AnimatePresence>
+        {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
+      </AnimatePresence>
+      {!isLoading && (
+        <div className="min-h-screen bg-background text-foreground">
       <div className="max-w-3xl mx-auto px-8 py-20">
         
         {/* Header Section */}
@@ -888,7 +896,9 @@ const Index = () => {
 
       {/* Floating Dock for Social Links */}
       <FloatingDockDemo />
-    </div>
+        </div>
+      )}
+    </>
   );
 };
 
