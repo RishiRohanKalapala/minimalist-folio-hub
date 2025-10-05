@@ -72,18 +72,6 @@ const Index = () => {
           </div>
         </motion.header>
 
-        {/* LeetCode Stats Section */}
-        <motion.section 
-          className="mb-32"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div className="max-w-2xl mx-auto">
-            <LeetCodeStats username="22r01a7335" />
-          </div>
-        </motion.section>
 
         {/* Introduction */}
         <motion.section 
@@ -211,6 +199,48 @@ const Index = () => {
         >
           <h2 className="text-xl font-medium text-text-primary mb-8">Ongoing Projects</h2>
           <div className="space-y-12">
+            <div className="relative p-1 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover-scale">
+              <div className="group block bg-background rounded-md p-6 transition-all duration-300 hover:shadow-xl">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
+                        GEAR up
+                      </h3>
+                      <span className="px-2 py-1 bg-cyan-500/10 text-cyan-500 text-xs rounded-full">
+                        New Project
+                      </span>
+                      <span className="px-2 py-1 bg-green-500/10 text-green-500 text-xs rounded-full animate-pulse">
+                        Active
+                      </span>
+                    </div>
+                    <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
+                      An innovative project focused on empowering students and professionals with cutting-edge tools and resources.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-2 flex-wrap">
+                  {['React', 'TypeScript', 'AI Integration', 'Cloud Platform'].map((tech) => (
+                    <span key={tech} className="text-xs text-text-muted">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* completed projects */}
+        <motion.section 
+          className="mb-32"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-xl font-medium text-text-primary mb-8">Completed Projects</h2>
+          <div className="space-y-12">
             <div className="relative p-1 rounded-lg bg-gradient-to-r from-primary to-primary/60 hover-scale">
               <a href="https://www.ckrdatapoint.in/" className="group block bg-background rounded-md p-6 transition-all duration-300 hover:shadow-xl">
                 <div className="flex justify-between items-start mb-4">
@@ -222,8 +252,8 @@ const Index = () => {
                       <span className="px-2 py-1 bg-amber-500/10 text-amber-500 text-xs rounded-full">
                         startup
                       </span>
-                      <span className="px-2 py-1 bg-green-500/10 text-green-500 text-xs rounded-full animate-pulse">
-                        Active
+                      <span className="px-2 py-1 bg-purple-500/10 text-purple-500 text-xs rounded-full">
+                        Completed
                       </span>
                     </div>
                     <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
@@ -318,8 +348,8 @@ const Index = () => {
                       <span className="px-2 py-1 bg-pink-500/10 text-pink-500 text-xs rounded-full">
                         Safety App
                       </span>
-                      <span className="px-2 py-1 bg-red-500/10 text-red-500 text-xs rounded-full animate-pulse">
-                        New
+                      <span className="px-2 py-1 bg-purple-500/10 text-purple-500 text-xs rounded-full">
+                        Completed
                       </span>
                     </div>
                     <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
@@ -383,8 +413,8 @@ const Index = () => {
                     <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
                      Authentication and Key Agreement Based on Anonymous Identity for Peer-to-Peer Cloud
                     </h3>
-                    <span className="px-2 py-1 bg-green-500/10 text-green-500 text-xs rounded-full">
-                      progress
+                    <span className="px-2 py-1 bg-purple-500/10 text-purple-500 text-xs rounded-full">
+                      Completed
                     </span>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
@@ -442,6 +472,9 @@ const Index = () => {
                     <span className="px-2 py-1 bg-blue-500/10 text-blue-500 text-xs rounded-full">
                       Web App
                     </span>
+                    <span className="px-2 py-1 bg-purple-500/10 text-purple-500 text-xs rounded-full">
+                      Completed
+                    </span>
                   </div>
                   <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
                    A web platform allowing anonymous submissions with end-to-end encryption, stored on a decentralized network (IPFS) to prevent tracing. Organizations can respond publicly without accessing submitter identities.
@@ -458,19 +491,6 @@ const Index = () => {
               </div>
             </a>
 
-          </div>
-        </motion.section>
-
-        {/* completed projects */}
-        <motion.section 
-          className="mb-32"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-xl font-medium text-text-primary mb-8">Completed Projects</h2>
-          <div className="space-y-12">
             <a href="https://knots-psi.vercel.app/" className="group block">
               <div className="flex justify-between items-start mb-4">
                 <div>
@@ -890,6 +910,19 @@ const Index = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </motion.section>
+        {/* LeetCode Stats Section */}
+        <motion.section 
+          className="mb-32"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-xl font-medium text-text-primary mb-8">Competitive Programming</h2>
+          <div className="max-w-2xl mx-auto">
+            <LeetCodeStats username="22r01a7335" />
           </div>
         </motion.section>
       </div>
