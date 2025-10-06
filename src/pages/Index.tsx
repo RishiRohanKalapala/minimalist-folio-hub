@@ -241,36 +241,34 @@ const Index = () => {
         >
           <h2 className="text-xl font-medium text-text-primary mb-8">Completed Projects</h2>
           <div className="space-y-12">
-            <div className="relative p-1 rounded-lg bg-gradient-to-r from-primary to-primary/60 hover-scale">
-              <a href="https://www.ckrdatapoint.in/" className="group block bg-background rounded-md p-6 transition-all duration-300 hover:shadow-xl">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
-                        CKR-Datapoint
-                      </h3>
-                      <span className="px-2 py-1 bg-amber-500/10 text-amber-500 text-xs rounded-full">
-                        startup
-                      </span>
-                      <span className="px-2 py-1 bg-purple-500/10 text-purple-500 text-xs rounded-full">
-                        Completed
-                      </span>
-                    </div>
-                    <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
-                      A premier educational experience designed to help you plan, learn, and achieve your academic and professional goals.
-                    </p>
-                  </div>
-                  <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
-                </div>
-                <div className="flex gap-2 flex-wrap">
-                  {['React', 'Next.js', 'Educational Platform', 'AI-powered'].map((tech) => (
-                    <span key={tech} className="text-xs text-text-muted">
-                      {tech}
+            <a href="https://www.ckrdatapoint.in/" className="group block">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
+                      CKR-Datapoint
+                    </h3>
+                    <span className="px-2 py-1 bg-amber-500/10 text-amber-500 text-xs rounded-full">
+                      startup
                     </span>
-                  ))}
+                    <span className="px-2 py-1 bg-purple-500/10 text-purple-500 text-xs rounded-full">
+                      Completed
+                    </span>
+                  </div>
+                  <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
+                    A premier educational experience designed to help you plan, learn, and achieve your academic and professional goals.
+                  </p>
                 </div>
-              </a>
-            </div>
+                <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-primary transition-smooth flex-shrink-0" />
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                {['React', 'Next.js', 'Educational Platform', 'AI-powered'].map((tech) => (
+                  <span key={tech} className="text-xs text-text-muted">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </a>
             <div className="mt-3">
               <p className="text-xs text-text-muted mb-2">Contributors</p>
               <div className="flex items-center gap-2">
@@ -337,33 +335,31 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="relative p-1 rounded-lg bg-gradient-to-r from-pink-500 to-red-500 hover-scale">
-              <div className="group block bg-background rounded-md p-6 transition-all duration-300 hover:shadow-xl">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
-                        Abhaya
-                      </h3>
-                      <span className="px-2 py-1 bg-pink-500/10 text-pink-500 text-xs rounded-full">
-                        Safety App
-                      </span>
-                      <span className="px-2 py-1 bg-purple-500/10 text-purple-500 text-xs rounded-full">
-                        Completed
-                      </span>
-                    </div>
-                    <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
-                      A comprehensive safety platform addressing harassment, unsafe public spaces, and providing immediate help for women and children in India. Building unified solutions where existing systems fail.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-2 flex-wrap">
-                  {['React Native', 'Real-time GPS', 'Emergency Services', 'Community Safety', 'AI Detection'].map((tech) => (
-                    <span key={tech} className="text-xs text-text-muted">
-                      {tech}
+            <div className="group block">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-lg text-text-primary font-medium group-hover:text-primary transition-smooth">
+                      Abhaya
+                    </h3>
+                    <span className="px-2 py-1 bg-pink-500/10 text-pink-500 text-xs rounded-full">
+                      Safety App
                     </span>
-                  ))}
+                    <span className="px-2 py-1 bg-purple-500/10 text-purple-500 text-xs rounded-full">
+                      Completed
+                    </span>
+                  </div>
+                  <p className="text-text-secondary text-sm leading-relaxed max-w-2xl">
+                    A comprehensive safety platform addressing harassment, unsafe public spaces, and providing immediate help for women and children in India. Building unified solutions where existing systems fail.
+                  </p>
                 </div>
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                {['React Native', 'Real-time GPS', 'Emergency Services', 'Community Safety', 'AI Detection'].map((tech) => (
+                  <span key={tech} className="text-xs text-text-muted">
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
             <div className="mt-3">
