@@ -7,6 +7,27 @@ import { useNavigate } from "react-router-dom";
 import { Preloader } from "@/components/Preloader";
 import { useState, useEffect } from "react";
 
+// Tech stack with icons
+const techStack = [
+  { name: "React", icon: "⚛️" },
+  { name: "Next.js", icon: "▲" },
+  { name: "Tailwindcss", icon: "🌊" },
+  { name: "Typescript", icon: "TS" },
+  { name: "Express", icon: "ex" },
+  { name: "Node.js", icon: "⬢" },
+  { name: "Hono", icon: "🔥" },
+  { name: "MongoDB", icon: "🍃" },
+  { name: "Postgres", icon: "🐘" },
+  { name: "Prisma", icon: "△" },
+  { name: "AWS", icon: "☁️" },
+  { name: "Docker", icon: "🐳" },
+  { name: "Tanstack Query", icon: "🔄" },
+  { name: "TRPC", icon: "🔗" },
+  { name: "Git", icon: "◉" },
+  { name: "Vercel", icon: "▲" },
+  { name: "Figma", icon: "🎨" },
+];
+
 const Index = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
@@ -91,58 +112,17 @@ const Index = () => {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-sm font-medium text-text-muted uppercase tracking-wider mb-8">Core Skills</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-text-primary font-medium mb-4">Frontend Development</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5/CSS3', 'Responsive Design'].map((skill) => (
-                      <span key={skill} className="px-3 py-1.5 bg-muted text-text-secondary text-sm rounded-md">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-text-primary font-medium mb-4">Backend & Databases</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {['Node.js', 'REST APIs', 'MongoDB Atlas', 'Prisma ORM', 'Authentication Systems'].map((skill) => (
-                      <span key={skill} className="px-3 py-1.5 bg-muted text-text-secondary text-sm rounded-md">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-text-primary font-medium mb-4">CMS & Platform Development</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {['Multi-Client CMS', 'Role-Based Access', 'Dashboard Systems', 'Client Portals'].map((skill) => (
-                      <span key={skill} className="px-3 py-1.5 bg-muted text-text-secondary text-sm rounded-md">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-text-primary font-medium mb-4">AI & Emerging Tech</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {['AI Recommendations', 'Predictive Systems', 'AI-powered CMS', 'Digital Twin Analysis'].map((skill) => (
-                      <span key={skill} className="px-3 py-1.5 bg-muted text-text-secondary text-sm rounded-md">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className="md:col-span-2">
-                  <h3 className="text-text-primary font-medium mb-4">Tools & Platforms</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {['Git & GitHub', 'Vercel', 'GoDaddy', 'Figma', 'LocalStorage Persistence'].map((skill) => (
-                      <span key={skill} className="px-3 py-1.5 bg-muted text-text-secondary text-sm rounded-md">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="text-text-muted italic text-lg mr-2">I build using</span>
+                {techStack.map((tech) => (
+                  <span 
+                    key={tech.name} 
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-muted border border-border rounded-full text-sm text-text-secondary hover:border-text-muted transition-colors"
+                  >
+                    <span className="text-xs">{tech.icon}</span>
+                    {tech.name}
+                  </span>
+                ))}
               </div>
             </motion.section>
 
