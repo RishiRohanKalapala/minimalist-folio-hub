@@ -7,25 +7,25 @@ import { useNavigate } from "react-router-dom";
 import { Preloader } from "@/components/Preloader";
 import { useState, useEffect } from "react";
 
-// Tech stack with icons
+// Tech stack with official logos
 const techStack = [
-  { name: "React", icon: "⚛️" },
-  { name: "Next.js", icon: "▲" },
-  { name: "Tailwindcss", icon: "🌊" },
-  { name: "Typescript", icon: "TS" },
-  { name: "Express", icon: "ex" },
-  { name: "Node.js", icon: "⬢" },
-  { name: "Hono", icon: "🔥" },
-  { name: "MongoDB", icon: "🍃" },
-  { name: "Postgres", icon: "🐘" },
-  { name: "Prisma", icon: "△" },
-  { name: "AWS", icon: "☁️" },
-  { name: "Docker", icon: "🐳" },
-  { name: "Tanstack Query", icon: "🔄" },
-  { name: "TRPC", icon: "🔗" },
-  { name: "Git", icon: "◉" },
-  { name: "Vercel", icon: "▲" },
-  { name: "Figma", icon: "🎨" },
+  { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", invert: true },
+  { name: "Tailwindcss", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+  { name: "Typescript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", invert: true },
+  { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+  { name: "Hono", icon: "https://hono.dev/images/logo-small.png" },
+  { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "Postgres", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+  { name: "Prisma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg", invert: true },
+  { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg", invert: true },
+  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { name: "Tanstack Query", icon: "https://tanstack.com/_build/assets/logo-color-600w-Bx4vtR8J.png" },
+  { name: "tRPC", icon: "https://trpc.io/img/logo.svg" },
+  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
+  { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
 ];
 
 const Index = () => {
@@ -112,14 +112,18 @@ const Index = () => {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-wrap items-center justify-center gap-3">
                 <span className="text-text-muted italic text-lg mr-2">I build using</span>
                 {techStack.map((tech) => (
                   <span 
                     key={tech.name} 
                     className="inline-flex items-center gap-2 px-4 py-2 bg-muted border border-border rounded-full text-sm text-text-secondary hover:border-text-muted transition-colors"
                   >
-                    <span className="text-xs">{tech.icon}</span>
+                    <img 
+                      src={tech.icon} 
+                      alt={tech.name} 
+                      className={`w-4 h-4 object-contain ${tech.invert ? 'invert' : ''}`}
+                    />
                     {tech.name}
                   </span>
                 ))}
