@@ -7,13 +7,17 @@ const CaseStudies = () => {
     const navigate = useNavigate();
 
     const techStack = [
-        { layer: "Frontend", tech: "React, Next.js, Tailwind" },
-        { layer: "Backend", tech: "Node.js, Express/NestJS" },
-        { layer: "Database", tech: "PostgreSQL / MongoDB" },
-        { layer: "ORM", tech: "Prisma" },
-        { layer: "Cache", tech: "Redis" },
-        { layer: "Auth", tech: "JWT" },
-        { layer: "Hosting", tech: "Vercel / AWS" },
+        { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+        { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", invert: true },
+        { name: "Tailwindcss", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+        { name: "Typescript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+        { name: "NestJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" },
+        { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+        { name: "Postgres", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+        { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
+        { name: "Prisma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg", invert: true },
+        { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+        { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg", invert: true },
     ];
 
     const coreFeatures = [
@@ -78,13 +82,16 @@ const CaseStudies = () => {
                     transition={{ duration: 0.6 }}
                     className="mb-12"
                 >
-                    <button
-                        onClick={() => navigate('/')}
-                        className="group flex items-center gap-2 text-sm font-medium text-zinc-500 hover:text-white transition-colors"
-                    >
-                        <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-                        <span>Back to Archive</span>
-                    </button>
+                    <div className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.2em]">
+                        <button
+                            onClick={() => navigate('/')}
+                            className="text-zinc-500 hover:text-white transition-colors"
+                        >
+                            Home
+                        </button>
+                        <span className="text-zinc-700">/</span>
+                        <span className="text-[#FF4D4D]">Case Studies</span>
+                    </div>
                 </motion.div>
 
                 {/* Hero Section */}
@@ -114,6 +121,64 @@ const CaseStudies = () => {
                     </div>
                 </motion.header>
 
+                {/* Tech Stack - Logos */}
+                <section className="mb-20">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                        <div className="md:col-span-3">
+                            <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-600">
+                                <span>Built With</span>
+                            </div>
+                        </div>
+                        <div className="md:col-span-9">
+                            <div className="flex flex-wrap gap-2 md:gap-3">
+                                {techStack.map((tech) => (
+                                    <motion.div
+                                        key={tech.name}
+                                        whileHover={{ y: -2, borderColor: "rgba(255,255,255,0.7)" }}
+                                        className="flex items-center gap-2.5 px-3.5 py-2 bg-zinc-900/40 border border-dotted border-white/20 rounded-xl transition-all cursor-default group"
+                                    >
+                                        <img
+                                            src={tech.icon}
+                                            alt={tech.name}
+                                            className={`w-5 h-5 object-contain ${tech.invert ? 'invert' : ''}`}
+                                        />
+                                        <span className="text-[14px] md:text-[15px] font-medium text-zinc-100 tracking-tight leading-none">
+                                            {tech.name}
+                                        </span>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Project Links */}
+                <section className="mb-20 pt-8 border-t border-zinc-900">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                        <div className="md:col-span-3">
+                            <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-600">
+                                <span>Resources</span>
+                            </div>
+                        </div>
+                        <div className="md:col-span-9">
+                            <div className="flex flex-col gap-3 font-mono text-sm">
+                                <div className="flex items-center gap-6">
+                                    <span className="text-zinc-500 uppercase tracking-widest text-[10px] w-16">Source</span>
+                                    <a href="https://github.com/kalapalarishirohan/CMS" className="text-zinc-300 hover:text-[#FF4D4D] transition-colors hover:underline decoration-zinc-800 underline-offset-4">
+                                        https://github.com/kalapalarishirohan/CMS
+                                    </a>
+                                </div>
+                                <div className="flex items-center gap-6">
+                                    <span className="text-zinc-500 uppercase tracking-widest text-[10px] w-16">Demo</span>
+                                    <a href="#" className="text-zinc-300 hover:text-[#FF4D4D] transition-colors hover:underline decoration-zinc-800 underline-offset-4">
+                                        Not Available
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Overview */}
                 <section className="mb-20 pt-8 border-t border-zinc-900">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
@@ -124,10 +189,17 @@ const CaseStudies = () => {
                         </div>
                         <div className="md:col-span-9">
                             <p className="text-lg text-zinc-400 leading-relaxed font-light">
-                                This project is a <span className="text-white">Headless Content Management System</span> designed to provide a scalable, API-driven,
+                                This project is a <span className="text-[#FF4D4D]">Headless Content Management System</span> designed to provide a scalable, API-driven,
                                 and multi-tenant content platform. It separates content management (backend) from content presentation
                                 (frontend), enabling flexible delivery across websites, mobile apps, dashboards, and third-party integrations.
                             </p>
+                            <div className="mt-8">
+                                <img
+                                    src="https://i.ibb.co/zWVd9rtQ/Chat-GPT-Image-Jan-27-2026-03-51-14-PM.png"
+                                    alt="Overview"
+                                    className="w-full rounded-xl border border-zinc-800/50 opacity-90"
+                                />
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -141,29 +213,38 @@ const CaseStudies = () => {
                             </div>
                         </div>
                         <div className="md:col-span-9 space-y-8">
-                            <p className="text-lg text-zinc-400 leading-relaxed font-light">
-                                Traditional CMS platforms often suffer from being <span className="text-white">tightly coupled</span> with frontend rendering, lacking flexibility for omnichannel delivery, and becoming performance bottlenecks at scale.
+                            <p className="text-lg text-zinc-400 leading-relaxed font-light mb-8">
+                                Traditional CMS platforms often suffer from being <span className="text-[#FF4D4D]">tightly coupled</span> with frontend rendering, lacking flexibility for omnichannel delivery, and becoming performance bottlenecks at scale. Managing content across multiple platforms (Web, Mobile, IoT) becomes a logistical nightmare without a centralized, API-first approach.
                             </p>
 
-                            <div className="grid md:grid-cols-2 gap-4">
-                                <ul className="space-y-3">
-                                    {[
-                                        "Tightly coupled frontend",
-                                        "Lack of omnichannel flexibility",
-                                        "Scaling difficulties for multiple clients",
-                                        "Limited automation"
-                                    ].map((item, i) => (
-                                        <li key={i} className="flex items-center gap-3 text-zinc-500 font-light">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-[#FF4D4D] shrinking-0" />
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className="p-6 bg-zinc-900/30 rounded-xl border border-zinc-800/50">
-                                    <p className="text-zinc-300 font-light italic">
-                                        "Goal: Build a modern, headless CMS that is API-first, scalable, customizable, and client-ready."
-                                    </p>
+                            <div className="mb-8">
+                                <div className="space-y-6">
+                                    <h3 className="text-xl font-serif text-white">Key Pain Points</h3>
+                                    <ul className="grid md:grid-cols-2 gap-4">
+                                        {[
+                                            { title: "Tightly Coupled Frontend", desc: "Monolithic architectures limit frontend framework choices and deployment speed." },
+                                            { title: "Omnichannel Rigidity", desc: "Difficulty in reusing content across web, mobile, and other digital touchpoints." },
+                                            { title: "Scaling Issues", desc: "Performance degradation when serving heavy media assets to a global audience." },
+                                            { title: "Manual Workflows", desc: "Lack of automation in content publishing and version control." }
+                                        ].map((item, i) => (
+                                            <li key={i} className="flex flex-col gap-1 text-zinc-500 font-light">
+                                                <div className="flex items-center gap-3">
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF4D4D] shrinking-0" />
+                                                    <span className="text-zinc-300 font-medium">{item.title}</span>
+                                                </div>
+                                                <p className="text-sm pl-4.5">{item.desc}</p>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
+                            </div>
+
+                            <div>
+                                <img
+                                    src="https://i.ibb.co/xqmdPYh6/Chat-GPT-Image-Jan-27-2026-03-56-06-PM.png"
+                                    alt="Challenges Visualization"
+                                    className="w-full rounded-xl border border-zinc-800/50 opacity-90"
+                                />
                             </div>
                         </div>
                     </div>
@@ -179,28 +260,33 @@ const CaseStudies = () => {
                             </div>
                         </div>
                         <div className="md:col-span-9 space-y-8">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {coreFeatures.map((feature, i) => (
-                                    <div
-                                        key={i}
-                                        className="bg-zinc-900/40 border border-zinc-800/50 p-6 hover:bg-zinc-900/60 hover:border-[#FF4D4D]/30 transition-all duration-300 group"
-                                    >
-                                        <div className="flex items-center gap-3 mb-4">
-                                            <div className="text-zinc-500 group-hover:text-[#FF4D4D] transition-colors">
-                                                {feature.icon}
-                                            </div>
-                                            <h3 className="font-medium text-zinc-200">{feature.title}</h3>
-                                        </div>
-                                        <ul className="space-y-2">
-                                            {feature.items.map((item, j) => (
-                                                <li key={j} className="text-sm text-zinc-500 flex items-center gap-2">
-                                                    <span className="w-1 h-1 rounded-full bg-zinc-700" />
-                                                    {item}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                ))}
+                            <div className="space-y-6 mb-8">
+                                <p className="text-lg text-zinc-400 leading-relaxed font-light">
+                                    To address these challenges, we architected a <span className="text-[#FF4D4D]">API-first solution</span> that completely decouples the backend content repository from the frontend presentation layer. This "Headless" approach allows for greater scalability, flexibility, and security.
+                                </p>
+                                <p className="text-lg text-zinc-400 leading-relaxed font-light">
+                                    The Core of the system is built on <span className="text-[#FF4D4D]">NestJS</span>, providing a robust and modular backend structure. We utilized <span className="text-[#FF4D4D]">PostgreSQL</span> for structured data storage and <span className="text-[#FF4D4D]">Redis</span> for high-performance caching. The entire platform is containerized using <span className="text-[#FF4D4D]">Docker</span> to ensure consistent environments across development and production.
+                                </p>
+                            </div>
+
+                            <div className="space-y-8">
+                                <p className="text-zinc-400 font-light leading-relaxed">
+                                    <strong className="text-white font-medium block mb-2">Content Management & Architecture</strong>
+                                    The platform enables <span className="text-[#FF4D4D]">dynamic content types</span> and includes a full-featured <span className="text-[#FF4D4D]">rich-text editor</span> with an integrated media library. Users can manage content lifecycles with draft/publish states, version history, and scheduled publishing capabilities.
+                                    The <span className="text-[#FF4D4D]">API-First Architecture</span> exposes both REST and GraphQL endpoints, delivering JSON-based structured content to any frontend. Security and stability are ensured through secure API tokens, strict validation, and automated rate limiting.
+                                </p>
+
+                                <p className="text-zinc-400 font-light leading-relaxed">
+                                    <strong className="text-white font-medium block mb-2">Multi-Tenancy & Security</strong>
+                                    <span className="text-[#FF4D4D]">Multi-Client Support</span> is built-in, offering separate workspaces and client-specific isolation. Each tenant enjoys custom branding abilities and dedicated domain-based access to their CMS environment.
+                                    We implemented granular <span className="text-[#FF4D4D]">Role-Based Access (RBAC)</span>, defining distinct permissions for Super Admins, Client Admins, Editors, Contributors, and View-only users to maintain secure operational workflows.
+                                </p>
+
+                                <p className="text-zinc-400 font-light leading-relaxed">
+                                    <strong className="text-white font-medium block mb-2">Performance & Developer Experience</strong>
+                                    To ensure high performance, the system leverages <span className="text-[#FF4D4D]">Redis caching</span> and global <span className="text-[#FF4D4D]">CDN media delivery</span>. We optimized database queries and implemented lazy loading with pagination to handle large datasets efficiently.
+                                    For developers, the platform provides comprehensive tools including <span className="text-[#FF4D4D]">webhooks</span> for real-time updates, SDK integration support, detailed API documentation, and robust import/export utilities.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -215,41 +301,47 @@ const CaseStudies = () => {
                             </div>
                         </div>
                         <div className="md:col-span-9 space-y-8">
-                            <div className="grid md:grid-cols-3 gap-6">
-                                <div className="space-y-4">
-                                    <div className="flex items-center gap-2 text-white">
-                                        <Server className="w-4 h-4 text-[#FF4D4D]" />
-                                        <span className="font-mono text-sm uppercase tracking-wider">Backend</span>
-                                    </div>
-                                    <ul className="space-y-2 text-sm text-zinc-500 font-light">
-                                        <li>Node.js + NestJS</li>
-                                        <li>Prisma ORM</li>
-                                        <li>PostgreSQL / MongoDB</li>
-                                        <li>Redis Caching</li>
-                                    </ul>
+                            <div className="space-y-8">
+                                <p className="text-lg text-zinc-400 leading-relaxed font-light">
+                                    The entire system runs on a <span className="text-[#FF4D4D]">cloud-native infrastructure</span> designed for high availability and fault tolerance. We utilize a microservices pattern where distinct bounded contexts (User Management, Content API, Asset Processing) are containerized and orchestrated independently.
+                                </p>
+
+                                <div>
+                                    <img
+                                        src="https://i.ibb.co/RTfQ0TFb/Chat-GPT-Image-Jan-27-2026-04-20-13-PM.png"
+                                        alt="Architecture Diagram"
+                                        className="w-full rounded-xl border border-zinc-800/50 opacity-90"
+                                    />
                                 </div>
-                                <div className="space-y-4">
-                                    <div className="flex items-center gap-2 text-white">
-                                        <Globe className="w-4 h-4 text-[#FF4D4D]" />
-                                        <span className="font-mono text-sm uppercase tracking-wider">Frontend</span>
+
+                                <div className="grid md:grid-cols-3 gap-6 pt-4">
+                                    <div className="space-y-2">
+                                        <div className="flex items-center gap-2 text-white/90">
+                                            <Server className="w-4 h-4 text-[#FF4D4D]" />
+                                            <span className="font-mono text-xs uppercase tracking-wider">Backend Core</span>
+                                        </div>
+                                        <p className="text-sm text-zinc-500 font-light leading-relaxed">
+                                            <span className="text-[#FF4D4D]">NestJS</span> microservices communicating via Redis Pub/Sub, with Prisma handling complex relational data in PostgreSQL.
+                                        </p>
                                     </div>
-                                    <ul className="space-y-2 text-sm text-zinc-500 font-light">
-                                        <li>React / Next.js</li>
-                                        <li>Tailwind CSS</li>
-                                        <li>ShadCN UI</li>
-                                        <li>Role-based dashboards</li>
-                                    </ul>
-                                </div>
-                                <div className="space-y-4">
-                                    <div className="flex items-center gap-2 text-white">
-                                        <Database className="w-4 h-4 text-[#FF4D4D]" />
-                                        <span className="font-mono text-sm uppercase tracking-wider">Infra</span>
+                                    <div className="space-y-2">
+                                        <div className="flex items-center gap-2 text-white/90">
+                                            <Globe className="w-4 h-4 text-[#FF4D4D]" />
+                                            <span className="font-mono text-xs uppercase tracking-wider">Frontend Layer</span>
+                                        </div>
+                                        <p className="text-sm text-zinc-500 font-light leading-relaxed">
+                                            <span className="text-[#FF4D4D]">Next.js</span> Edge Runtime for global content delivery, consuming GraphQL APIs with strict typing and caching policies.
+                                        </p>
                                     </div>
-                                    <ul className="space-y-2 text-sm text-zinc-500 font-light">
-                                        <li>Dockerized deployment</li>
-                                        <li>Cloud hosting (Vercel/AWS)</li>
-                                        <li>CI/CD pipelines</li>
-                                    </ul>
+                                    <div className="space-y-2">
+                                        <div className="flex items-center gap-2 text-white/90">
+                                            <Database className="w-4 h-4 text-[#FF4D4D]" />
+                                            <span className="font-mono text-xs uppercase tracking-wider">DevOps & Infra</span>
+                                        </div>
+                                        <p className="text-sm text-zinc-500 font-light leading-relaxed">
+                                            Automated CI/CD pipelines deploying to <span className="text-[#FF4D4D]">Vercel/AWS</span>, with comprehensive monitoring and Dockerized local dev environments.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -267,14 +359,31 @@ const CaseStudies = () => {
                         <div className="md:col-span-9">
                             <div className="grid md:grid-cols-2 gap-4">
                                 {[
-                                    "Improved content delivery speed",
-                                    "Reduced developer dependency via Admin UI",
-                                    "Enabled multi-platform content reuse",
-                                    "Portfolio-ready scalable architecture"
+                                    {
+                                        title: "40% Faster Content Delivery",
+                                        desc: "Optimized API response times and global CDN caching reduced content load times significantly."
+                                    },
+                                    {
+                                        title: "Zero Developer Dependency",
+                                        desc: "Marketing teams can now launch landing pages and update content without touching a single line of code."
+                                    },
+                                    {
+                                        title: "Omnichannel Scalability",
+                                        desc: "Seamlessly serving content to Web, Mobile, and IoT devices from a single centralized repository."
+                                    },
+                                    {
+                                        title: "Enterprise-Grade Security",
+                                        desc: "Role-based access control and secure API tokens handled sensitive data compliance requirements."
+                                    }
                                 ].map((outcome, i) => (
-                                    <div key={i} className="flex items-start gap-4 p-4 border border-zinc-800/50 bg-zinc-900/20">
-                                        <span className="text-[#FF4D4D] font-mono text-sm">0{i + 1}</span>
-                                        <span className="text-zinc-400 font-light text-sm">{outcome}</span>
+                                    <div key={i} className="flex flex-col gap-2 p-6 border border-zinc-800/50 bg-zinc-900/20 rounded-xl hover:border-zinc-700 transition-colors">
+                                        <div className="flex items-center gap-3">
+                                            <span className="text-[#FF4D4D] font-mono text-sm">0{i + 1}</span>
+                                            <h4 className="text-zinc-200 font-medium">{outcome.title}</h4>
+                                        </div>
+                                        <p className="text-zinc-400 font-light text-sm leading-relaxed pl-8">
+                                            {outcome.desc}
+                                        </p>
                                     </div>
                                 ))}
                             </div>
@@ -282,25 +391,7 @@ const CaseStudies = () => {
                     </div>
                 </section>
 
-                {/* Tech Stack - Text Based */}
-                <section className="mb-20 pt-8 border-t border-zinc-900">
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
-                        <div className="md:col-span-3">
-                            <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-600">
-                                <span>Tech Stack</span>
-                            </div>
-                        </div>
-                        <div className="md:col-span-9">
-                            <div className="flex flex-wrap gap-2">
-                                {["React", "NestJS", "PostgreSQL", "Redis", "Docker", "AWS", "TypeScript", "Tailwind"].map((tech) => (
-                                    <span key={tech} className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest px-3 py-1.5 border border-zinc-800 hover:border-[#FF4D4D]/50 hover:text-white transition-colors cursor-default">
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
+
 
                 <footer className="mt-24 pt-8 pb-8 border-t border-zinc-900 flex justify-between items-center">
                     <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest">
