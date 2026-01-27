@@ -161,7 +161,7 @@ const Index = () => {
                       Headless <span className="text-[#FF4D4D]">CMS</span>
                     </h3>
                     <p className="text-base md:text-xl text-zinc-500 max-w-2xl leading-relaxed md:leading-snug font-light">
-                      Developing a <span className="text-[#FF4D4D]">multi-tenant platform</span> for modern content delivery. Architecting central asset management with <span className="text-[#FF4D4D]">AI-assisted generation</span>, <span className="text-[#FF4D4D]">RBAC security</span>, and scalable <span className="text-[#FF4D4D]">GraphQL APIs</span>.
+                      I am developing a <span className="text-[#FF4D4D]">multi-tenant platform</span> for modern content delivery. This involves architecting central asset management with <span className="text-[#FF4D4D]">AI-assisted generation</span>, <span className="text-[#FF4D4D]">RBAC security</span>, and scalable <span className="text-[#FF4D4D]">GraphQL APIs</span>.
                     </p>
                   </div>
 
@@ -209,7 +209,7 @@ const Index = () => {
                           HSGA <span className="text-[#FF4D4D]">Telangana</span>
                         </h3>
                         <p className="text-base md:text-lg text-zinc-400 max-w-xl leading-relaxed font-light">
-                          Developing the <span className="text-white">official landing page</span> and a comprehensive <span className="text-white">Student Management System</span>. Scaled to serve <span className="text-white">10,000+ student dashboards</span> with optimized performance.
+                          I am developing the <span className="text-white">official landing page</span> and a comprehensive <span className="text-white">Student Management System</span>. It is scaled to serve <span className="text-white">10,000+ student dashboards</span> with optimized performance.
                         </p>
                       </div>
 
@@ -234,7 +234,7 @@ const Index = () => {
                   <h2 className="text-[10px] font-mono uppercase tracking-[0.3em] text-zinc-600">
                     Selected Works
                   </h2>
-                  <span className="text-xl md:text-2xl font-serif text-white tracking-tight">Archive 23 — 24</span>
+                  <span className="text-xl md:text-2xl font-serif text-white tracking-tight">Archive 24 — 25</span>
                 </div>
 
                 {/* Minimal Category Toggle */}
@@ -274,16 +274,18 @@ const Index = () => {
                       <div className="flex flex-col">
                         {[
                           {
-                            title: "SafeSpeak",
-                            desc: "An <span class='text-[#FF4D4D]'>anonymous storage</span> solution using <span class='text-[#FF4D4D]'>IPFS</span> and <span class='text-[#FF4D4D]'>Node.js</span> for decentralized privacy.",
-                            tags: ["Web3", "Node.js", "IPFS"],
-                            link: "https://github.com/RishiRohanKalapala-cloud/Safespeak"
+                            title: "Farmora",
+                            desc: "A <span class='text-[#FF4D4D]'>Full-stack Agro Marketplace</span> designed for real-world impact. Features a comprehensive catalog, seller workflows, and robust <span class='text-[#FF4D4D]'>order management</span> logic.",
+                            tags: ["Full Stack", "Marketplace", "System Design"],
+                            link: "https://farmoraport.vercel.app",
+                            year: "2025"
                           },
                           {
-                            title: "Knots",
-                            desc: "A <span class='text-[#FF4D4D]'>minimalist infrastructure</span> for blogging, optimized for <span class='text-[#FF4D4D]'>SEO</span> and markdown content.",
-                            tags: ["Next.js", "MongoDB", "Auth"],
-                            link: "https://knots-psi.vercel.app/"
+                            title: "DripMsg",
+                            desc: "A <span class='text-[#FF4D4D]'>Real-time Messaging</span> system built on <span class='text-[#FF4D4D]'>Socket.IO</span>. Demonstrates usage of event-driven architecture.",
+                            tags: ["Socket.IO", "Real-time", "Backend"],
+                            link: "https://ckr-web.vercel.app",
+                            year: "2024"
                           }
                         ].map((project, idx) => (
                           <a
@@ -315,6 +317,15 @@ const Index = () => {
                             </div>
                           </a>
                         ))}
+                        <div className="pt-4 flex justify-center md:justify-start">
+                          <button
+                            onClick={() => navigate('/projects')}
+                            className="group flex items-center gap-2 px-6 py-3 bg-zinc-900/50 border border-zinc-800 rounded-xl text-sm font-mono uppercase tracking-widest text-zinc-400 hover:text-white hover:border-zinc-600 transition-all"
+                          >
+                            View All Projects
+                            <ArrowUpRight size={16} className="text-zinc-600 group-hover:text-[#FF4D4D] transition-colors" />
+                          </button>
+                        </div>
                       </div>
                     ) : (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
