@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 const techStack = [
   { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
   { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", invert: true },
+  { name: "NestJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" },
   { name: "Tailwindcss", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
   { name: "Typescript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
   { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", invert: true },
@@ -130,7 +131,7 @@ const Index = () => {
                         <img
                           src={tech.icon}
                           alt={tech.name}
-                          className="w-5 h-5 object-contain"
+                          className={`w-5 h-5 object-contain ${tech.invert ? 'invert' : ''}`}
                         />
                         {/* Name - Sharp Sans-serif */}
                         <span className="text-[14px] md:text-[15px] font-medium text-zinc-100 tracking-tight leading-none">
