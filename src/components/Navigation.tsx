@@ -46,8 +46,39 @@ export const Navigation = () => {
         },
     ];
 
+    const [time, setTime] = React.useState(new Date());
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setTime(new Date());
+        }, 1000);
+        return () => clearInterval(timer);
+    }, []);
+
+    const formatTime = (date: Date) => {
+        return date.toLocaleTimeString('en-US', {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+    };
+
     return (
-        <div className="fixed top-4 right-4 md:top-8 md:right-8 z-50">
+        <div className="fixed top-4 right-4 md:top-8 md:right-8 z-50 flex items-center gap-4">
+
+            {/* Last Updated Date - hidden on mobile */}
+            <div className="hidden md:flex flex-col items-end">
+                <span className="text-[9px] font-mono text-zinc-600 uppercase tracking-widest leading-none mb-1">Last Updated</span>
+                <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest leading-none">Jan 27, 2026</span>
+            </div>
+
+            {/* Time Capsule - hidden on mobile */}
+            <button className="hidden md:flex items-center gap-2 px-4 py-2.5 bg-zinc-900/50 backdrop-blur-md border border-white/10 rounded-full text-[10px] font-mono uppercase tracking-widest text-zinc-400 hover:text-white hover:bg-zinc-900 transition-all group min-w-[120px] justify-center">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                {formatTime(time)} IST
+            </button>
+
             <Sheet>
                 <SheetTrigger asChild>
                     <button className="p-3 bg-zinc-900/50 backdrop-blur-md border border-white/10 rounded-full text-white hover:bg-zinc-800 transition-colors shadow-2xl">
