@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const name = "Abhaya Shankar";
+const name = "Rishi Rohan Kalapala";
 
 export const Preloader = ({ onComplete }: { onComplete: () => void }) => {
   const [displayedText, setDisplayedText] = useState("");
