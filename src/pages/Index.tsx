@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { ArrowUpRight, MapPin, Code2, PenTool } from "lucide-react";
 import { LeetCodeStats } from "@/components/LeetCodeStats";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Preloader } from "@/components/Preloader";
 import { useState, useEffect } from "react";
 
@@ -318,13 +318,13 @@ const Index = () => {
                           </a>
                         ))}
                         <div className="pt-4 flex justify-center md:justify-start">
-                          <button
-                            onClick={() => navigate('/projects')}
+                          <Link
+                            to="/projects"
                             className="group flex items-center gap-2 px-6 py-3 bg-zinc-900/50 border border-zinc-800 rounded-xl text-sm font-mono uppercase tracking-widest text-zinc-400 hover:text-white hover:border-zinc-600 transition-all"
                           >
                             View All Projects
                             <ArrowUpRight size={16} className="text-zinc-600 group-hover:text-[#FF4D4D] transition-colors" />
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     ) : (
