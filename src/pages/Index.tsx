@@ -76,17 +76,17 @@ const Index = () => {
                 </div>
 
                 {/* Typography - Name & Red Highlights */}
-                <div className="space-y-2">
-                  <h1 className="text-5xl md:text-7xl font-serif text-white tracking-tighter leading-none">
+                <div className="space-y-4 md:space-y-2">
+                  <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif text-white tracking-tighter leading-[1.1] md:leading-none">
                     Rishi Rohan Kalapala
                   </h1>
-                  <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl leading-tight font-light">
+                  <p className="text-lg md:text-2xl text-zinc-500 max-w-2xl leading-relaxed md:leading-tight font-light">
                     I am a <span className="text-[#FF4D4D] font-medium">Full Stack Developer</span> building <span className="text-[#FF4D4D] font-medium">AI-native</span> apps and <span className="text-[#FF4D4D] font-medium">scalable systems</span>.
                   </p>
                 </div>
 
                 {/* Metadata & CTA - Inline and Tighter */}
-                <div className="flex flex-wrap items-center gap-x-10 gap-y-4 pt-4 border-t border-zinc-900">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-y-4 gap-x-10 pt-6 md:pt-4 border-t border-zinc-900">
                   <button
                     onClick={() => navigate('/case-studies')}
                     className="group flex items-center gap-1.5 text-sm font-medium text-white transition-colors hover:text-[#FF4D4D]"
@@ -155,18 +155,18 @@ const Index = () => {
                 </div>
 
                 {/* Content */}
-                <div className="md:col-span-9 space-y-5">
-                  <div className="space-y-2">
-                    <h3 className="text-4xl md:text-5xl font-serif text-white tracking-tight leading-none">
+                <div className="md:col-span-9 space-y-6 md:space-y-5">
+                  <div className="space-y-3 md:space-y-2">
+                    <h3 className="text-3xl md:text-5xl font-serif text-white tracking-tight leading-none">
                       Headless <span className="text-[#FF4D4D]">CMS</span>
                     </h3>
-                    <p className="text-lg md:text-xl text-zinc-500 max-w-2xl leading-snug font-light">
+                    <p className="text-base md:text-xl text-zinc-500 max-w-2xl leading-relaxed md:leading-snug font-light">
                       Developing a <span className="text-[#FF4D4D]">multi-tenant platform</span> for modern content delivery. Architecting central asset management with <span className="text-[#FF4D4D]">AI-assisted generation</span>, <span className="text-[#FF4D4D]">RBAC security</span>, and scalable <span className="text-[#FF4D4D]">GraphQL APIs</span>.
                     </p>
                   </div>
 
                   {/* Tags - Minimal Text Style */}
-                  <div className="flex flex-wrap gap-x-6 gap-y-2 pt-1">
+                  <div className="flex flex-wrap gap-x-4 gap-y-2 pt-1">
                     {['NestJS', 'Next.js', 'PostgreSQL', 'OpenAI', 'Redis'].map(tag => (
                       <span key={tag} className="text-[10px] font-mono text-zinc-800 uppercase tracking-[0.15em] font-bold">
                         #{tag}
@@ -191,13 +191,13 @@ const Index = () => {
 
                 {/* Content */}
                 <div className="md:col-span-9">
-                  <div className="p-8 rounded-2xl bg-gradient-to-br from-zinc-900/50 to-zinc-900/10 border border-zinc-800 relative overflow-hidden group hover:border-zinc-700 transition-colors">
-                    <div className="absolute top-0 right-0 p-8 opacity-20 group-hover:opacity-40 transition-opacity">
-                      <ArrowUpRight size={40} className="text-[#FF4D4D]" />
+                  <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-zinc-900/50 to-zinc-900/10 border border-zinc-800 relative overflow-hidden group hover:border-zinc-700 transition-colors">
+                    <div className="absolute top-0 right-0 p-6 md:p-8 opacity-20 group-hover:opacity-40 transition-opacity">
+                      <ArrowUpRight size={24} className="text-[#FF4D4D] md:w-10 md:h-10" />
                     </div>
 
                     <div className="space-y-6 relative z-10">
-                      <div className="space-y-2">
+                      <div className="space-y-3 md:space-y-2">
                         <div className="flex items-center gap-3 mb-3">
                           <div className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF4D4D] opacity-75"></span>
@@ -208,7 +208,7 @@ const Index = () => {
                         <h3 className="text-3xl md:text-5xl font-serif text-white tracking-tight leading-none">
                           HSGA <span className="text-[#FF4D4D]">Telangana</span>
                         </h3>
-                        <p className="text-lg text-zinc-400 max-w-xl leading-relaxed font-light">
+                        <p className="text-base md:text-lg text-zinc-400 max-w-xl leading-relaxed font-light">
                           Developing the <span className="text-white">official landing page</span> and a comprehensive <span className="text-white">Student Management System</span>. Scaled to serve <span className="text-white">10,000+ student dashboards</span> with optimized performance.
                         </p>
                       </div>
@@ -234,16 +234,16 @@ const Index = () => {
                   <h2 className="text-[10px] font-mono uppercase tracking-[0.3em] text-zinc-600">
                     Selected Works
                   </h2>
-                  <span className="text-2xl font-serif text-white tracking-tight">Archive 23 — 24</span>
+                  <span className="text-xl md:text-2xl font-serif text-white tracking-tight">Archive 23 — 24</span>
                 </div>
 
                 {/* Minimal Category Toggle */}
-                <div className="flex gap-8">
+                <div className="flex gap-8 overflow-x-auto no-scrollbar">
                   {["personal", "client"].map((tab) => (
                     <button
                       key={tab}
                       onClick={() => setActiveTab(tab)}
-                      className={`text-[10px] font-mono uppercase tracking-[0.2em] transition-all relative pb-2 ${activeTab === tab ? "text-[#FF4D4D]" : "text-zinc-600 hover:text-zinc-400"
+                      className={`text-[10px] font-mono uppercase tracking-[0.2em] transition-all relative pb-2 whitespace-nowrap ${activeTab === tab ? "text-[#FF4D4D]" : "text-zinc-600 hover:text-zinc-400"
                         }`}
                     >
                       {tab} projects
@@ -401,7 +401,7 @@ const Index = () => {
 
             {/* Footer Section: Writing/Journal - Ultra Minimal */}
             <section className="mt-12 pt-6 border-t border-zinc-900">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-start">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
 
                 {/* Label Column - Reduced contrast to keep focus on titles */}
                 <div className="md:col-span-3">
@@ -414,14 +414,14 @@ const Index = () => {
                 <div className="md:col-span-9 space-y-8">
 
                   {/* Article 1: Roadmap */}
-                  <a href="#" className="group block space-y-1">
+                  <a href="#" className="group block space-y-2">
                     <div className="flex justify-between items-start gap-4">
-                      <h3 className="text-2xl md:text-3xl font-serif text-white group-hover:text-red-500 transition-colors duration-300 leading-none tracking-tight">
+                      <h3 className="text-xl md:text-3xl font-serif text-white group-hover:text-red-500 transition-colors duration-300 leading-tight tracking-tight">
                         Web & App Development Roadmap
                       </h3>
-                      <ArrowUpRight size={18} className="text-zinc-800 group-hover:text-red-500 transition-all duration-300 flex-shrink-0" />
+                      <ArrowUpRight size={18} className="text-zinc-800 group-hover:text-red-500 transition-all duration-300 flex-shrink-0 mt-1 md:mt-0" />
                     </div>
-                    <p className="text-base text-zinc-500 font-light max-w-xl leading-snug">
+                    <p className="text-sm md:text-base text-zinc-500 font-light max-w-xl leading-relaxed">
                       A <span className="text-red-500">comprehensive guide</span> to engineering software with the <span className="text-red-500">P3D Formula</span>.
                     </p>
                     <div className="flex items-center gap-2.5 pt-0.5">
@@ -432,14 +432,14 @@ const Index = () => {
                   </a>
 
                   {/* Article 2: Startup Journey */}
-                  <a href="#" className="group block space-y-1">
+                  <a href="#" className="group block space-y-2">
                     <div className="flex justify-between items-start gap-4">
-                      <h3 className="text-2xl md:text-3xl font-serif text-white group-hover:text-red-500 transition-colors duration-300 leading-none tracking-tight">
+                      <h3 className="text-xl md:text-3xl font-serif text-white group-hover:text-red-500 transition-colors duration-300 leading-tight tracking-tight">
                         From Chaos to Clarity
                       </h3>
-                      <ArrowUpRight size={18} className="text-zinc-800 group-hover:text-red-500 transition-all duration-300 flex-shrink-0" />
+                      <ArrowUpRight size={18} className="text-zinc-800 group-hover:text-red-500 transition-all duration-300 flex-shrink-0 mt-1 md:mt-0" />
                     </div>
-                    <p className="text-base text-zinc-500 font-light max-w-xl leading-snug">
+                    <p className="text-sm md:text-base text-zinc-500 font-light max-w-xl leading-relaxed">
                       The <span className="text-red-500">naming journey</span> of my <span className="text-red-500">startup</span>. Distilling vision into identity.
                     </p>
                     <div className="flex items-center gap-2.5 pt-0.5">
@@ -450,14 +450,14 @@ const Index = () => {
                   </a>
 
                   {/* Article 3: Vibe Coding */}
-                  <a href="https://www.linkedin.com/pulse/traditional-coding-vs-vibe-rishi-rohan-kalapala-mga8f/" target="_blank" className="group block space-y-1">
+                  <a href="https://www.linkedin.com/pulse/traditional-coding-vs-vibe-rishi-rohan-kalapala-mga8f/" target="_blank" className="group block space-y-2">
                     <div className="flex justify-between items-start gap-4">
-                      <h3 className="text-2xl md:text-3xl font-serif text-white group-hover:text-red-500 transition-colors duration-300 leading-none tracking-tight">
+                      <h3 className="text-xl md:text-3xl font-serif text-white group-hover:text-red-500 transition-colors duration-300 leading-tight tracking-tight">
                         Traditional vs Vibe Coding
                       </h3>
-                      <ArrowUpRight size={18} className="text-zinc-800 group-hover:text-red-500 transition-all duration-300 flex-shrink-0" />
+                      <ArrowUpRight size={18} className="text-zinc-800 group-hover:text-red-500 transition-all duration-300 flex-shrink-0 mt-1 md:mt-0" />
                     </div>
-                    <p className="text-base text-zinc-500 font-light max-w-xl leading-snug">
+                    <p className="text-sm md:text-base text-zinc-500 font-light max-w-xl leading-relaxed">
                       Reflections on <span className="text-red-500">AI-assisted development</span> and the shift toward intuition.
                     </p>
                     <div className="flex items-center gap-2.5 pt-0.5">
