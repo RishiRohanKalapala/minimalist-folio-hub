@@ -482,9 +482,12 @@ const Index = () => {
               </div>
             </section>
             {/* Copyright Footer */}
-            <footer className="mt-24 pt-8 pb-8 border-t border-zinc-900 flex justify-center">
+            <footer className="mt-24 pt-8 pb-8 border-t border-zinc-900 flex flex-col sm:flex-row justify-between items-center gap-4">
               <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest">
                 © 2026 Rishi Rohan Kalapala. All Rights Reserved.
+              </p>
+              <p className="text-[10px] font-mono text-zinc-700 uppercase tracking-widest">
+                Version <span className="text-[#FF4D4D]">Harbor</span>
               </p>
             </footer>
           </main>
