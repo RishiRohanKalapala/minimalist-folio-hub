@@ -102,7 +102,7 @@ const Index = () => {
                     </div>
                     <div className="flex items-center gap-2.5 px-4 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full hover:border-zinc-700 transition-colors">
                       <Code2 size={14} strokeWidth={2} className="text-[#FF4D4D]" />
-                      <span className="text-xs font-medium text-zinc-300 tracking-wide">B.Tech AI & ML</span>
+                      <span className="text-xs font-medium text-zinc-300 tracking-wide">B.Tech AI & ML <span className="text-zinc-500">• 2026</span></span>
                     </div>
                   </div>
                 </div>
