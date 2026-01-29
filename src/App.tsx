@@ -8,6 +8,7 @@ import AbhayaDocs from "./pages/AbhayaDocs";
 import NotFound from "./pages/NotFound";
 import Agency from "./pages/Agency";
 import CaseStudies from "./pages/CaseStudies";
+import AllProjects from "./pages/AllProjects";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/projects" element={<AllProjects />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/abhaya-docs" element={<AbhayaDocs />} />
           <Route path="/agency" element={<Agency />} />
