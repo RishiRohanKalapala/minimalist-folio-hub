@@ -95,14 +95,14 @@ const Index = () => {
                     <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </button>
 
-                  <div className="flex items-center gap-6">
-                    <div className="flex items-center gap-2 text-zinc-600">
-                      <MapPin size={12} strokeWidth={2} />
-                      <span className="text-[10px] font-mono uppercase tracking-widest">Hyderabad</span>
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2.5 px-4 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full hover:border-zinc-700 transition-colors">
+                      <MapPin size={14} strokeWidth={2} className="text-[#FF4D4D]" />
+                      <span className="text-xs font-medium text-zinc-300 tracking-wide">Hyderabad, India</span>
                     </div>
-                    <div className="flex items-center gap-2 text-zinc-600">
-                      <Code2 size={12} strokeWidth={2} />
-                      <span className="text-[10px] font-mono uppercase tracking-widest">B.Tech AI</span>
+                    <div className="flex items-center gap-2.5 px-4 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full hover:border-zinc-700 transition-colors">
+                      <Code2 size={14} strokeWidth={2} className="text-[#FF4D4D]" />
+                      <span className="text-xs font-medium text-zinc-300 tracking-wide">B.Tech AI & ML</span>
                     </div>
                   </div>
                 </div>
