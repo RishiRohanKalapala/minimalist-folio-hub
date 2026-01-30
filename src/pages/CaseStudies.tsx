@@ -179,6 +179,35 @@ const CaseStudies = () => {
                     </div>
                 </section>
 
+                {/* More Case Studies */}
+                <section className="mb-20 pt-8 border-t border-zinc-900">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                        <div className="md:col-span-3">
+                            <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-600">
+                                <span>More Studies</span>
+                            </div>
+                        </div>
+                        <div className="md:col-span-9">
+                            <motion.button
+                                onClick={() => navigate('/case-studies-2026')}
+                                whileHover={{ x: 4 }}
+                                className="group flex items-center gap-4 p-4 bg-zinc-900/40 border border-dotted border-white/20 rounded-xl hover:border-[#FF4D4D]/50 transition-all w-full text-left"
+                            >
+                                <div className="flex-1">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <span className="text-[10px] font-mono tracking-[0.2em] text-[#FF4D4D] uppercase">2026</span>
+                                        <span className="w-1 h-px bg-zinc-700" />
+                                        <span className="text-[10px] font-mono tracking-[0.2em] text-zinc-500 uppercase">AI/ML</span>
+                                    </div>
+                                    <h3 className="text-lg font-serif text-white mb-1">AI-Native Analytics Platform</h3>
+                                    <p className="text-sm text-zinc-500">Real-time ML predictions with TensorFlow, PyTorch & FastAPI</p>
+                                </div>
+                                <ArrowUpRight className="w-5 h-5 text-zinc-600 group-hover:text-[#FF4D4D] transition-colors" />
+                            </motion.button>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Overview */}
                 <section className="mb-20 pt-8 border-t border-zinc-900">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
