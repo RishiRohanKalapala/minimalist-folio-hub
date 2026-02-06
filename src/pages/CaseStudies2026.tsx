@@ -214,6 +214,11 @@ const CaseStudies2026 = () => {
                                 querying, <span className="text-[#FF4D4D]">vector embeddings</span> for semantic search, and 
                                 <span className="text-[#FF4D4D]"> predictive ML models</span> for forecasting and anomaly detection.
                             </p>
+                            <p className="text-lg text-zinc-400 leading-relaxed font-light mt-4">
+                                Built with a <span className="text-[#FF4D4D]">microservices architecture</span>, the platform separates concerns 
+                                into dedicated services for data ingestion, model inference, real-time streaming, and API management. This 
+                                ensures <span className="text-[#FF4D4D]">horizontal scalability</span> and fault isolation across the entire system.
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -252,6 +257,12 @@ const CaseStudies2026 = () => {
                                     ))}
                                 </ul>
                             </div>
+
+                            <p className="text-lg text-zinc-400 leading-relaxed font-light">
+                                Furthermore, existing solutions often fail to provide <span className="text-[#FF4D4D]">contextual intelligence</span>—they 
+                                show what happened but not why or what to do next. Business users are left navigating complex dashboards without 
+                                actionable recommendations, leading to <span className="text-[#FF4D4D]">decision paralysis</span> and missed revenue opportunities.
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -261,11 +272,60 @@ const CaseStudies2026 = () => {
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
                         <div className="md:col-span-3">
                             <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-600">
-                                <span>Features</span>
+                                <span>Solution & Features</span>
                             </div>
                         </div>
-                        <div className="md:col-span-9">
-                            <div className="grid md:grid-cols-2 gap-6">
+                        <div className="md:col-span-9 space-y-8">
+                            <div className="space-y-6 mb-8">
+                                <p className="text-lg text-zinc-400 leading-relaxed font-light">
+                                    To address these challenges, we architected an <span className="text-[#FF4D4D]">AI-first solution</span> that 
+                                    embeds machine learning at every layer of the analytics stack. Rather than bolting AI onto existing tools, 
+                                    we built intelligence into the platform's DNA from day one.
+                                </p>
+                                <p className="text-lg text-zinc-400 leading-relaxed font-light">
+                                    The core inference engine is built on <span className="text-[#FF4D4D]">Python</span> with <span className="text-[#FF4D4D]">FastAPI</span> 
+                                    serving as the high-performance API layer. We utilize <span className="text-[#FF4D4D]">TensorFlow</span> for 
+                                    production-grade model serving and <span className="text-[#FF4D4D]">PyTorch</span> for rapid experimentation 
+                                    and research. All services are containerized with <span className="text-[#FF4D4D]">Docker</span> and orchestrated 
+                                    via <span className="text-[#FF4D4D]">Kubernetes</span> for elastic scaling.
+                                </p>
+                            </div>
+
+                            <div className="space-y-8">
+                                <p className="text-zinc-400 font-light leading-relaxed">
+                                    <strong className="text-white font-medium block mb-2">AI-Powered Analytics Core</strong>
+                                    The platform enables <span className="text-[#FF4D4D]">natural language querying</span>—users simply ask questions 
+                                    in plain English and receive instant insights. Our <span className="text-[#FF4D4D]">predictive modeling engine</span> 
+                                    analyzes historical patterns to forecast trends, while <span className="text-[#FF4D4D]">anomaly detection</span> 
+                                    algorithms automatically surface outliers and potential issues before they escalate.
+                                </p>
+
+                                <p className="text-zinc-400 font-light leading-relaxed">
+                                    <strong className="text-white font-medium block mb-2">Modern Architecture & Security</strong>
+                                    The <span className="text-[#FF4D4D]">microservices design</span> ensures each component can scale independently 
+                                    based on demand. We implemented <span className="text-[#FF4D4D]">event-driven systems</span> using Redis Streams 
+                                    and WebSockets for real-time data flow. Security follows a <span className="text-[#FF4D4D]">zero-trust architecture</span> 
+                                    with end-to-end encryption, SOC2 compliance, and comprehensive audit logging.
+                                </p>
+
+                                <p className="text-zinc-400 font-light leading-relaxed">
+                                    <strong className="text-white font-medium block mb-2">Cloud-Native Infrastructure</strong>
+                                    Built for the cloud from the ground up, the platform features <span className="text-[#FF4D4D]">auto-scaling infrastructure</span> 
+                                    that handles traffic spikes automatically. <span className="text-[#FF4D4D]">Multi-region deployment</span> ensures 
+                                    low latency globally, while our disaster recovery systems guarantee <span className="text-[#FF4D4D]">99.99% uptime SLA</span>.
+                                </p>
+
+                                <p className="text-zinc-400 font-light leading-relaxed">
+                                    <strong className="text-white font-medium block mb-2">LLM & Vector Integration</strong>
+                                    We integrated <span className="text-[#FF4D4D]">Large Language Models</span> for conversational analytics 
+                                    and automated report generation. <span className="text-[#FF4D4D]">Vector embeddings</span> power semantic 
+                                    search across documents and data, while <span className="text-[#FF4D4D]">RAG pipelines</span> combine 
+                                    retrieval with generation for context-aware responses. Custom <span className="text-[#FF4D4D]">fine-tuned models</span> 
+                                    are trained on domain-specific data for maximum accuracy.
+                                </p>
+                            </div>
+
+                            <div className="grid md:grid-cols-2 gap-6 pt-4">
                                 {coreFeatures.map((feature, i) => (
                                     <motion.div
                                         key={feature.title}
@@ -293,24 +353,149 @@ const CaseStudies2026 = () => {
                     </div>
                 </section>
 
-                {/* Back to Home */}
-                <section className="pt-8 border-t border-zinc-900">
-                    <div className="flex justify-between items-center">
-                        <button
-                            onClick={() => navigate('/')}
-                            className="flex items-center gap-2 text-sm text-zinc-500 hover:text-white transition-colors"
-                        >
-                            ← Back to Home
-                        </button>
-                        <button
-                            onClick={() => navigate('/case-studies')}
-                            className="flex items-center gap-2 text-sm text-zinc-500 hover:text-[#FF4D4D] transition-colors group"
-                        >
-                            View 2024 Case Study
-                            <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                        </button>
+                {/* System Architecture */}
+                <section className="mb-20 pt-8 border-t border-zinc-900">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                        <div className="md:col-span-3">
+                            <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-600">
+                                <span>Architecture</span>
+                            </div>
+                        </div>
+                        <div className="md:col-span-9 space-y-8">
+                            <div className="space-y-8">
+                                <p className="text-lg text-zinc-400 leading-relaxed font-light">
+                                    The system architecture follows a <span className="text-[#FF4D4D]">layered microservices pattern</span> with 
+                                    clear separation of concerns. Data flows through ingestion, processing, inference, and presentation layers, 
+                                    each independently scalable and fault-tolerant.
+                                </p>
+
+                                <div className="grid md:grid-cols-3 gap-6 pt-4">
+                                    <div className="space-y-2">
+                                        <div className="flex items-center gap-2 text-white/90">
+                                            <Cpu className="w-4 h-4 text-[#FF4D4D]" />
+                                            <span className="font-mono text-xs uppercase tracking-wider">ML Core</span>
+                                        </div>
+                                        <p className="text-sm text-zinc-500 font-light leading-relaxed">
+                                            <span className="text-[#FF4D4D]">TensorFlow Serving</span> and <span className="text-[#FF4D4D]">TorchServe</span> 
+                                            handle model inference with automatic batching, GPU optimization, and model versioning for A/B testing.
+                                        </p>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <div className="flex items-center gap-2 text-white/90">
+                                            <Database className="w-4 h-4 text-[#FF4D4D]" />
+                                            <span className="font-mono text-xs uppercase tracking-wider">Data Layer</span>
+                                        </div>
+                                        <p className="text-sm text-zinc-500 font-light leading-relaxed">
+                                            <span className="text-[#FF4D4D]">PostgreSQL</span> for structured data, <span className="text-[#FF4D4D]">Redis</span> 
+                                            for caching and real-time streams, and vector databases for embedding storage and similarity search.
+                                        </p>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <div className="flex items-center gap-2 text-white/90">
+                                            <Cloud className="w-4 h-4 text-[#FF4D4D]" />
+                                            <span className="font-mono text-xs uppercase tracking-wider">Orchestration</span>
+                                        </div>
+                                        <p className="text-sm text-zinc-500 font-light leading-relaxed">
+                                            <span className="text-[#FF4D4D]">Kubernetes</span> manages container orchestration with Helm charts, 
+                                            while CI/CD pipelines automate testing, model validation, and deployment.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
+
+                {/* Outcomes */}
+                <section className="mb-20 pt-8 border-t border-zinc-900">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                        <div className="md:col-span-3">
+                            <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-600">
+                                <span>Impact</span>
+                            </div>
+                        </div>
+                        <div className="md:col-span-9">
+                            <div className="grid md:grid-cols-2 gap-4">
+                                {[
+                                    {
+                                        title: "70% Faster Insights",
+                                        desc: "Natural language querying eliminated the need for SQL expertise, reducing time-to-insight from hours to seconds."
+                                    },
+                                    {
+                                        title: "Predictive Accuracy",
+                                        desc: "ML models achieved 94% accuracy in forecasting key business metrics, enabling proactive decision-making."
+                                    },
+                                    {
+                                        title: "Real-Time Processing",
+                                        desc: "Stream processing handles 2M+ events per day with sub-100ms latency for instant anomaly detection."
+                                    },
+                                    {
+                                        title: "Democratized Access",
+                                        desc: "Non-technical users now generate 60% of all analytics queries, previously bottlenecked on data teams."
+                                    }
+                                ].map((outcome, i) => (
+                                    <div key={i} className="flex flex-col gap-2 p-6 border border-zinc-800/50 bg-zinc-900/20 rounded-xl hover:border-zinc-700 transition-colors">
+                                        <div className="flex items-center gap-3">
+                                            <span className="text-[#FF4D4D] font-mono text-sm">0{i + 1}</span>
+                                            <h4 className="text-zinc-200 font-medium">{outcome.title}</h4>
+                                        </div>
+                                        <p className="text-zinc-400 font-light text-sm leading-relaxed pl-8">
+                                            {outcome.desc}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Future Enhancements */}
+                <section className="mb-20 pt-8 border-t border-zinc-900">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                        <div className="md:col-span-3">
+                            <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-600">
+                                <span>Roadmap</span>
+                            </div>
+                        </div>
+                        <div className="md:col-span-9">
+                            <div className="flex flex-wrap gap-3">
+                                {[
+                                    "Multi-modal AI (images, audio)",
+                                    "Autonomous report generation",
+                                    "Custom model training UI",
+                                    "Federated learning support",
+                                    "Real-time collaboration",
+                                    "Mobile analytics app"
+                                ].map((item, i) => (
+                                    <span key={i} className="px-4 py-2 bg-zinc-900/40 border border-zinc-800 rounded-full text-sm text-zinc-400 hover:border-[#FF4D4D]/50 transition-colors">
+                                        {item}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Footer */}
+                <footer className="mt-24 pt-8 pb-8 border-t border-zinc-900 flex justify-between items-center">
+                    <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest">
+                        Case Study 2026
+                    </p>
+                    <div className="flex items-center gap-6">
+                        <button
+                            onClick={() => navigate('/case-studies')}
+                            className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest hover:text-[#FF4D4D] transition-colors"
+                        >
+                            2024 Study
+                        </button>
+                        <button
+                            onClick={() => navigate('/')}
+                            className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest hover:text-white transition-colors"
+                        >
+                            Back to Home
+                        </button>
+                    </div>
+                </footer>
 
             </main>
         </div>
