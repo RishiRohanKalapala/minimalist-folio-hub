@@ -116,26 +116,6 @@ const CaseStudies2026 = () => {
                     </div>
                 </motion.header>
 
-                {/* Metrics */}
-                <section className="mb-20">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {metrics.map((metric, i) => (
-                            <motion.div
-                                key={metric.label}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className="p-6 bg-zinc-900/40 border border-zinc-800 rounded-2xl hover:border-zinc-700 transition-colors"
-                            >
-                                <div className="flex items-center gap-2 text-[#FF4D4D] mb-2">
-                                    {metric.icon}
-                                    <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500">{metric.label}</span>
-                                </div>
-                                <p className="text-3xl md:text-4xl font-serif text-white">{metric.value}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </section>
 
                 {/* Tech Stack */}
                 <section className="mb-20">
